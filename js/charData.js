@@ -1,4 +1,7 @@
 var charData = {
+    "Bismarck (Majesty of the Ironblood)": "bisimai_2",
+    "Ark Royal (Banquet Guardian)": "huangjiafangzhou_3",
+    
     "Taihou (Forbidden Feast)": "dafeng_2",
     "Atago (Midsummer March)": "aidang_2",
     "Eldridge (New Year's Handholding)": "aierdeliqi_4",
