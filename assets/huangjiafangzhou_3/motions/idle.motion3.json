@@ -5,9 +5,9 @@
     "Fps": 30.0,
     "Loop": true,
     "AreBeziersRestricted": true,
-    "CurveCount": 90,
-    "TotalSegmentCount": 665,
-    "TotalPointCount": 1927,
+    "CurveCount": 91,
+    "TotalSegmentCount": 666,
+    "TotalPointCount": 1929,
     "UserDataCount": 0,
     "TotalUserDataSize": 0
   },
@@ -4670,6 +4670,17 @@
         -7.735,
         12,
         -7.735
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamBeltYao",
+      "Segments": [
+        0,
+        0,
+        0,
+        12,
+        0
       ]
     },
     {
