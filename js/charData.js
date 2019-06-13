@@ -1,4 +1,6 @@
 var charData = {
+    "Sirius (Midsummer Seirios)": "tianlangxing_3",
+    
     "Bismarck (Majesty of the Ironblood)": "bisimai_2",
     "Ark Royal (Banquet Guardian)": "huangjiafangzhou_3",
     
