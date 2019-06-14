@@ -6,8 +6,8 @@
     "Loop": false,
     "AreBeziersRestricted": true,
     "CurveCount": 114,
-    "TotalSegmentCount": 459,
-    "TotalPointCount": 1099,
+    "TotalSegmentCount": 462,
+    "TotalPointCount": 1104,
     "UserDataCount": 1,
     "TotalUserDataSize": 0
   },
@@ -1424,6 +1424,30 @@
         2,
         7.6,
         -18
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamSZBL",
+      "Segments": [
+        0,
+        0,
+        2,
+        0.9,
+        0,
+        1,
+        1.856,
+        0,
+        2.811,
+        30,
+        3.767,
+        30,
+        2,
+        4.8,
+        30,
+        2,
+        7.6,
+        30
       ]
     },
     {
@@ -3078,17 +3102,6 @@
     {
       "Target": "Parameter",
       "Id": "Paramxky",
-      "Segments": [
-        0,
-        0,
-        0,
-        7.6,
-        0
-      ]
-    },
-    {
-      "Target": "Parameter",
-      "Id": "ParamSZBL",
       "Segments": [
         0,
         0,
