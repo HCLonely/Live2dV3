@@ -29,6 +29,32 @@
         .btnGenericText:active {
             box-shadow: 1px 1px 4px white, -1px 1px 4px white, 1px -1px 4px white, -1px -1px 4px white;
         }
+        .darken {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            left: 0px;
+        }
+        .selector {
+            width: 80%;
+            height: 90%;
+            position: absolute;
+            left: 10%;
+            background-color: #5c5d70;
+            overflow-y: auto;
+            padding: 10px;
+            border-radius: 3px;
+        }
+        .thumbbutton {
+            cursor: pointer;
+            height: 101px;
+            width: 180px;
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 20px;
+            border-radius: 3px;
+        }
     </style>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -39,9 +65,13 @@
             </div>
     <div align="center">
         <div class="form-group" style="display: inline-block;">
-            <label>Character:</label>
+            <label><b>Character</b></label>
             <select class="selectCharacter form-control" style="background-color: #24252d; color: #ffffff;"></select>
         </div>
+    </div>
+
+    <div align="center" style="margin-bottom: 15px;">
+        <div class="btnGenericText" onclick="onSelectBG()" style="font-size: 17px; height: 40px;"><b>Change Background</b></div>
     </div>
 
     <div align="center" style="margin-bottom: 15px;">
@@ -51,7 +81,7 @@
     
     <!-- Canvas -->
     <div align="center">
-        <div class="Canvas left" style="display: inline-block;"></div>
+        <div class="Canvas" style="display: inline-block; background-image: url(../assets/bg/zgreen.png); background-size: 100%; background-repeat: no-repeat;" id="L2dCanvas"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -72,6 +102,7 @@
     <script src="js/live2dcubismpixi.js"></script>
 
     <!-- User's Script -->
+    <script src = "js/backgroundData.js"></script>
     <script src = "js/charData.js"></script>
     <script src = "js/l2d.js"></script>
     <script src = "js/main.js"></script>
