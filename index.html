@@ -5,19 +5,53 @@
     <meta charset="utf-8" />
     <title>Azur Lane Live2D Viewer</title>
 
+    <style>
+        .btnGenericText {
+            white-space: nowrap;
+            height: 30px;
+            text-align: center;
+            vertical-align: middle;
+            display: table-cell;
+            background-color: #24252d;
+            border-style: solid;
+            border-color: #5c5d70;
+            border-width: 1px;
+            cursor: pointer;
+            padding: 0px 7px 0px 7px;
+            font-size: 14px;
+            color: white;
+            margin-bottom: 5px;
+            margin-left: 5px;
+        }
+        .btnGenericText:hover {
+            box-shadow: 0px 0px 10px white;
+        }
+        .btnGenericText:active {
+            box-shadow: 1px 1px 4px white, -1px 1px 4px white, 1px -1px 4px white, -1px -1px 4px white;
+        }
+    </style>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>
-    <div class="container">
-        <div class="form-group">
+<body style="background-color: #494a5a; color: white;">
+    <div align="center">
+                <h1>Azur Lane Live2D Viewer</h1>
+            </div>
+    <div align="center">
+        <div class="form-group" style="display: inline-block;">
             <label>Character:</label>
-            <select class="selectCharacter form-control"></select>
+            <select class="selectCharacter form-control" style="background-color: #24252d; color: #ffffff;"></select>
         </div>
-        <div class="selectAnimation btn-group" role="group" aria-label="Animation">
-        </div>
+    </div>
 
-        <!-- Canvas -->
-        <div class="Canvas left"></div>
+    <div align="center" style="margin-bottom: 15px;">
+        <div class="selectAnimation btn-group" role="group" aria-label="Animation" style="display: inline-block; width: 90%;">
+        </div>
+    </div>
+    
+    <!-- Canvas -->
+    <div align="center">
+        <div class="Canvas left" style="display: inline-block;"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

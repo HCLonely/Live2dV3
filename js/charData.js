@@ -1,9 +1,7 @@
 var charData = {
-    "Sirius (Midsummer Seirios)": "tianlangxing_3",
-    
+    "Sirius (Midsummer Seirios)": "tianlangxing_3",    
     "Bismarck (Majesty of the Ironblood)": "bisimai_2",
-    "Ark Royal (Banquet Guardian)": "huangjiafangzhou_3",
-    
+    "Ark Royal (Banquet Guardian)": "huangjiafangzhou_3",    
     "Taihou (Forbidden Feast)": "dafeng_2",
     "Atago (Midsummer March)": "aidang_2",
     "Eldridge (New Year's Handholding)": "aierdeliqi_4",

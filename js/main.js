@@ -23,7 +23,10 @@ class Viewer {
             this.l2d.load(name, this);
         });
 
-        this.app = new PIXI.Application(1280, 720, { backgroundColor: 0x1099bb });
+        var wt = window.innerWidth * 0.9;
+        var ht = (wt / 16.0) * 9.0;
+
+        this.app = new PIXI.Application(wt, ht, { backgroundColor: 0x1099bb });
         this.canvas.html(this.app.view);
 
         this.app.ticker.add((deltaTime) => {
@@ -36,7 +39,7 @@ class Viewer {
         });
         window.onresize = (event) => {
             if (event === void 0) { event = null; }
-            let width = window.innerWidth;
+            let width = window.innerWidth * 0.9;
             let height = (width / 16.0) * 9.0;
             this.app.view.style.width = width + "px";
             this.app.view.style.height = height + "px";
@@ -98,7 +101,7 @@ class Viewer {
                 let btn = document.createElement("button");
                 let label = document.createTextNode(key);
                 btn.appendChild(label);
-                btn.className = "btn btn-secondary";
+                btn.className = "btnGenericText";
                 btn.addEventListener("click", () => {
                     this.startAnimation(key, "base");
                 });
