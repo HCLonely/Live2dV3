@@ -23,8 +23,12 @@ class L2D {
             let textures = new Array();
             let textureCount = 0;
             let motionNames = new Array();
+            let modelNames = new Array();
 
-            this.loader.add(name+'_model', modelDir+modelPath, { xhrType: PIXI.loaders.Resource.XHR_RESPONSE_TYPE.JSON });
+            if (!modelNames.includes(name+'_model')){
+                this.loader.add(name+'_model', modelDir+modelPath, { xhrType: PIXI.loaders.Resource.XHR_RESPONSE_TYPE.JSON });
+                modelNames.push(name+'_model');
+            } 
 
             this.loader.load((loader, resources) => {
                 let model3Obj = resources[name+'_model'].data;
@@ -48,8 +52,10 @@ class L2D {
                     for (let group in model3Obj['FileReferences']['Motions']) {
                         model3Obj['FileReferences']['Motions'][group].forEach((element) => {
                             let motionName = element['File'].split('/').pop().split('.').shift();
-                            loader.add(name+'_'+motionName, modelDir+element['File'], { xhrType: PIXI.loaders.Resource.XHR_RESPONSE_TYPE.JSON });
-                            motionNames.push(name+'_'+motionName);
+                            if (!motionNames.includes(name+'_'+motionName)){
+                                loader.add(name+'_'+motionName, modelDir+element['File'], { xhrType: PIXI.loaders.Resource.XHR_RESPONSE_TYPE.JSON });
+                                motionNames.push(name+'_'+motionName);
+                            } 
                         });
                     }
                 }
