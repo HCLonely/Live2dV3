@@ -1,4 +1,5 @@
 var charData = {
+    "Black Prince (White Princess)": "heitaizi_2",  
     "Vampire (Princess of the Night)": "xixuegui_4",  
     "Honolulu (Festival Date)": "huonululu_5",    
     "Sirius (Midsummer Seirios)": "tianlangxing_3",    
