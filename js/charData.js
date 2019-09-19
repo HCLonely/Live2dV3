@@ -1,4 +1,5 @@
 var charData = {
+    "Shoukaku (Dancing Crane in the Wind)": "xianghe_2", 
     "Zara (Poolside Coincidence)": "zhala_2", 
     "Black Prince (White Princess)": "heitaizi_2",  
     "Vampire (Princess of the Night)": "xixuegui_4",  

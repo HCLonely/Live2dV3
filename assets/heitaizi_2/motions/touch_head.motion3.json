@@ -4,9 +4,9 @@
     "Duration": 3.833,
     "Fps": 60.0,
     "Loop": true,
-    "CurveCount": 208,
-    "TotalSegmentCount": 796,
-    "TotalPointCount": 1088,
+    "CurveCount": 209,
+    "TotalSegmentCount": 797,
+    "TotalPointCount": 1089,
     "UserDataCount": 2,
     "TotalUserDataSize": 0
   },
@@ -3733,39 +3733,6 @@
     },
     {
       "Target": "PartOpacity",
-      "Id": "Part24",
-      "Segments": [
-        0,
-        1,
-        2,
-        3.83,
-        1
-      ]
-    },
-    {
-      "Target": "PartOpacity",
-      "Id": "Part39",
-      "Segments": [
-        0,
-        1,
-        2,
-        3.83,
-        1
-      ]
-    },
-    {
-      "Target": "PartOpacity",
-      "Id": "Part38",
-      "Segments": [
-        0,
-        1,
-        2,
-        3.83,
-        1
-      ]
-    },
-    {
-      "Target": "PartOpacity",
       "Id": "Part40",
       "Segments": [
         0,
@@ -3855,6 +3822,39 @@
     {
       "Target": "PartOpacity",
       "Id": "Part6",
+      "Segments": [
+        0,
+        1,
+        2,
+        3.83,
+        1
+      ]
+    },
+    {
+      "Target": "PartOpacity",
+      "Id": "Part24",
+      "Segments": [
+        0,
+        1,
+        2,
+        3.83,
+        1
+      ]
+    },
+    {
+      "Target": "PartOpacity",
+      "Id": "Part39",
+      "Segments": [
+        0,
+        1,
+        2,
+        3.83,
+        1
+      ]
+    },
+    {
+      "Target": "PartOpacity",
+      "Id": "Part38",
       "Segments": [
         0,
         1,
@@ -4438,6 +4438,17 @@
     {
       "Target": "Parameter",
       "Id": "shuibai",
+      "Segments": [
+        0,
+        0,
+        0,
+        3.833,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "xiongtucen",
       "Segments": [
         0,
         0,

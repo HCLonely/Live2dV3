@@ -25,10 +25,10 @@ class L2D {
             let motionNames = new Array();
             let modelNames = new Array();
 
-            if (!modelNames.includes(name+'_model')){
+            //if (!modelNames.includes(name+'_model')){
                 this.loader.add(name+'_model', modelDir+modelPath, { xhrType: PIXI.loaders.Resource.XHR_RESPONSE_TYPE.JSON });
                 modelNames.push(name+'_model');
-            } 
+            //} 
 
             this.loader.load((loader, resources) => {
                 let model3Obj = resources[name+'_model'].data;
@@ -55,7 +55,11 @@ class L2D {
                             if (!motionNames.includes(name+'_'+motionName)){
                                 loader.add(name+'_'+motionName, modelDir+element['File'], { xhrType: PIXI.loaders.Resource.XHR_RESPONSE_TYPE.JSON });
                                 motionNames.push(name+'_'+motionName);
-                            } 
+                            } else {
+                                var n = name+'_'+motionName+String(Date.now());
+                                loader.add(n, modelDir+element['File'], { xhrType: PIXI.loaders.Resource.XHR_RESPONSE_TYPE.JSON });
+                                motionNames.push(name+'_'+motionName);
+                            }
                         });
                     }
                 }

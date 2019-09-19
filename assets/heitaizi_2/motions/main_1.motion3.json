@@ -4,9 +4,9 @@
     "Duration": 6.62,
     "Fps": 60.0,
     "Loop": true,
-    "CurveCount": 205,
-    "TotalSegmentCount": 1201,
-    "TotalPointCount": 1515,
+    "CurveCount": 206,
+    "TotalSegmentCount": 1202,
+    "TotalPointCount": 1516,
     "UserDataCount": 2,
     "TotalUserDataSize": 0
   },
@@ -4793,48 +4793,6 @@
     },
     {
       "Target": "PartOpacity",
-      "Id": "Part24",
-      "Segments": [
-        0,
-        1,
-        2,
-        3.83,
-        1,
-        2,
-        6.62,
-        1
-      ]
-    },
-    {
-      "Target": "PartOpacity",
-      "Id": "Part39",
-      "Segments": [
-        0,
-        1,
-        2,
-        3.83,
-        1,
-        2,
-        6.62,
-        1
-      ]
-    },
-    {
-      "Target": "PartOpacity",
-      "Id": "Part38",
-      "Segments": [
-        0,
-        1,
-        2,
-        3.83,
-        1,
-        2,
-        6.62,
-        1
-      ]
-    },
-    {
-      "Target": "PartOpacity",
       "Id": "Part40",
       "Segments": [
         0,
@@ -4948,6 +4906,48 @@
     {
       "Target": "PartOpacity",
       "Id": "Part6",
+      "Segments": [
+        0,
+        1,
+        2,
+        3.83,
+        1,
+        2,
+        6.62,
+        1
+      ]
+    },
+    {
+      "Target": "PartOpacity",
+      "Id": "Part24",
+      "Segments": [
+        0,
+        1,
+        2,
+        3.83,
+        1,
+        2,
+        6.62,
+        1
+      ]
+    },
+    {
+      "Target": "PartOpacity",
+      "Id": "Part39",
+      "Segments": [
+        0,
+        1,
+        2,
+        3.83,
+        1,
+        2,
+        6.62,
+        1
+      ]
+    },
+    {
+      "Target": "PartOpacity",
+      "Id": "Part38",
       "Segments": [
         0,
         1,
@@ -5684,6 +5684,17 @@
     {
       "Target": "Parameter",
       "Id": "shuibai",
+      "Segments": [
+        0,
+        0,
+        0,
+        6.62,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "xiongtucen",
       "Segments": [
         0,
         0,

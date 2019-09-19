@@ -4,9 +4,9 @@
     "Duration": 7.67,
     "Fps": 60.0,
     "Loop": true,
-    "CurveCount": 207,
-    "TotalSegmentCount": 1359,
-    "TotalPointCount": 1757,
+    "CurveCount": 208,
+    "TotalSegmentCount": 1360,
+    "TotalPointCount": 1758,
     "UserDataCount": 2,
     "TotalUserDataSize": 0
   },
@@ -1149,17 +1149,17 @@
         -0.404,
         0,
         3.833,
-        0,
+        -0.197,
         1,
         3.916,
-        0,
+        -0.197,
         4,
-        0.02,
+        -0.186,
         4.083,
-        -0.015,
+        -0.204,
         1,
         4.389,
-        -0.143,
+        -0.273,
         4.694,
         -0.608,
         5,
@@ -5462,48 +5462,6 @@
     },
     {
       "Target": "PartOpacity",
-      "Id": "Part24",
-      "Segments": [
-        0,
-        1,
-        2,
-        4.08,
-        1,
-        2,
-        7.67,
-        1
-      ]
-    },
-    {
-      "Target": "PartOpacity",
-      "Id": "Part39",
-      "Segments": [
-        0,
-        1,
-        2,
-        4.08,
-        1,
-        2,
-        7.67,
-        1
-      ]
-    },
-    {
-      "Target": "PartOpacity",
-      "Id": "Part38",
-      "Segments": [
-        0,
-        1,
-        2,
-        4.08,
-        1,
-        2,
-        7.67,
-        1
-      ]
-    },
-    {
-      "Target": "PartOpacity",
       "Id": "Part40",
       "Segments": [
         0,
@@ -5617,6 +5575,48 @@
     {
       "Target": "PartOpacity",
       "Id": "Part6",
+      "Segments": [
+        0,
+        1,
+        2,
+        4.08,
+        1,
+        2,
+        7.67,
+        1
+      ]
+    },
+    {
+      "Target": "PartOpacity",
+      "Id": "Part24",
+      "Segments": [
+        0,
+        1,
+        2,
+        4.08,
+        1,
+        2,
+        7.67,
+        1
+      ]
+    },
+    {
+      "Target": "PartOpacity",
+      "Id": "Part39",
+      "Segments": [
+        0,
+        1,
+        2,
+        4.08,
+        1,
+        2,
+        7.67,
+        1
+      ]
+    },
+    {
+      "Target": "PartOpacity",
+      "Id": "Part38",
       "Segments": [
         0,
         1,
@@ -6342,6 +6342,17 @@
     {
       "Target": "Parameter",
       "Id": "shuibai",
+      "Segments": [
+        0,
+        0,
+        0,
+        7.67,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "xiongtucen",
       "Segments": [
         0,
         0,
