@@ -4,9 +4,9 @@
     "Duration": 9.7,
     "Fps": 60.0,
     "Loop": true,
-    "CurveCount": 312,
-    "TotalSegmentCount": 1427,
-    "TotalPointCount": 2191,
+    "CurveCount": 311,
+    "TotalSegmentCount": 1426,
+    "TotalPointCount": 2190,
     "UserDataCount": 2,
     "TotalUserDataSize": 0
   },
@@ -7898,17 +7898,6 @@
     {
       "Target": "Parameter",
       "Id": "zongshangxia",
-      "Segments": [
-        0,
-        0,
-        0,
-        9.7,
-        0
-      ]
-    },
-    {
-      "Target": "Parameter",
-      "Id": "zongjiaodu",
       "Segments": [
         0,
         0,

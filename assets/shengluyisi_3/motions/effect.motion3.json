@@ -6,7 +6,7 @@
     "Loop": true,
     "CurveCount": 12,
     "TotalSegmentCount": 13,
-    "TotalPointCount": 25,
+    "TotalPointCount": 17,
     "UserDataCount": 0,
     "TotalUserDataSize": 0
   },
@@ -17,7 +17,11 @@
       "Segments": [
         0,
         0,
-        0,
+        1,
+        1.833,
+        0.333,
+        3.667,
+        0.667,
         5.5,
         1
       ]
@@ -28,7 +32,11 @@
       "Segments": [
         0,
         0,
-        0,
+        1,
+        1.833,
+        1,
+        3.667,
+        2,
         5.5,
         3
       ]
