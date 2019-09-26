@@ -1,4 +1,5 @@
-var charData = {
+﻿var charData = {
+    "Surcouf (Shopping Time!)": "xukufu_2", 
     "Shoukaku (Dancing Crane in the Wind)": "xianghe_2", 
     "Zara (Poolside Coincidence)": "zhala_2", 
     "Black Prince (White Princess)": "heitaizi_2",  
