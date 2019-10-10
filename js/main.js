@@ -1,5 +1,8 @@
 $(document).ready(() => {
     var v = new Viewer('assets');
+    var screen_height = Math.max( document.body.scrollHeight, document.body.offsetHeight, 
+                               document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );   
+    $("#footer").css("top",screen_height - $("#footer").height() - 20);
 });
 
 class Viewer {
@@ -55,6 +58,9 @@ class Viewer {
                 this.model.scale = new PIXI.Point((this.model.position.x * 0.06), (this.model.position.x * 0.06));
                 this.model.masks.resize(this.app.view.width, this.app.view.height);
             }
+            var screen_height = Math.max( document.body.scrollHeight, document.body.offsetHeight, 
+                               document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );   
+            $("#footer").css("top",screen_height - $("#footer").height() - 20);
         };
         this.isClick = false;
         this.app.view.addEventListener('mousedown', (event) => {
