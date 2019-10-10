@@ -206,7 +206,7 @@
 						"Id": "ParamFDWL"
 					},
 					"VertexIndex": 1,
-					"Scale": 0.6,
+					"Scale": 0.3,
 					"Weight": 100,
 					"Type": "Angle",
 					"Reflect": false
@@ -230,7 +230,7 @@
 					},
 					"Mobility": 1,
 					"Delay": 0.5,
-					"Acceleration": 0.8,
+					"Acceleration": 0.5,
 					"Radius": 2
 				}
 			],

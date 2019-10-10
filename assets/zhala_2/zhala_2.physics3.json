@@ -17,7 +17,7 @@
 		},
 		"PhysicsDictionary": [
 			{
-				"Id": "PhysicsSetting8",
+				"Id": "PhysicsSetting1",
 				"Name": "乳揺れ物理X"
 			},
 			{
@@ -28,7 +28,7 @@
 	},
 	"PhysicsSettings": [
 		{
-			"Id": "PhysicsSetting8",
+			"Id": "PhysicsSetting1",
 			"Input": [
 				{
 					"Source": {

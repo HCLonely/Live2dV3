@@ -7,7 +7,7 @@
     "CurveCount": 209,
     "TotalSegmentCount": 788,
     "TotalPointCount": 982,
-    "UserDataCount": 1,
+    "UserDataCount": 2,
     "TotalUserDataSize": 0
   },
   "Curves": [
@@ -4436,6 +4436,10 @@
   "UserData": [
     {
       "Time": 0.0,
+      "Value": ""
+    },
+    {
+      "Time": 8.17,
       "Value": ""
     }
   ]
