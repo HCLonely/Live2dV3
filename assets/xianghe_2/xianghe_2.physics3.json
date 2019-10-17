@@ -47,7 +47,7 @@
 				{
 					"Source": {
 						"Target": "Parameter",
-						"Id": "ParamBodyAngleX"
+						"Id": "shangshenbianxing"
 					},
 					"Weight": 40,
 					"Type": "X",

@@ -5,8 +5,8 @@
     "Fps": 60.0,
     "Loop": true,
     "CurveCount": 311,
-    "TotalSegmentCount": 1236,
-    "TotalPointCount": 1958,
+    "TotalSegmentCount": 1239,
+    "TotalPointCount": 1961,
     "UserDataCount": 2,
     "TotalUserDataSize": 0
   },
@@ -2415,6 +2415,26 @@
         7.4,
         0,
         2,
+        8.1,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamBodyAngleX",
+      "Segments": [
+        0,
+        0,
+        2,
+        5.4,
+        0,
+        0,
+        6.083,
+        4,
+        0,
+        7.4,
+        -5,
+        0,
         8.1,
         0
       ]
@@ -7134,17 +7154,6 @@
     {
       "Target": "Parameter",
       "Id": "youtuisousuo",
-      "Segments": [
-        0,
-        0,
-        0,
-        8.1,
-        0
-      ]
-    },
-    {
-      "Target": "Parameter",
-      "Id": "ParamBodyAngleX",
       "Segments": [
         0,
         0,
