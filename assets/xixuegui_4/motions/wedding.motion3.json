@@ -4,9 +4,9 @@
     "Duration": 31.87,
     "Fps": 30.0,
     "Loop": true,
-    "CurveCount": 156,
-    "TotalSegmentCount": 2072,
-    "TotalPointCount": 4118,
+    "CurveCount": 154,
+    "TotalSegmentCount": 2070,
+    "TotalPointCount": 4116,
     "UserDataCount": 2,
     "TotalUserDataSize": 0
   },
@@ -11479,28 +11479,6 @@
     {
       "Target": "Parameter",
       "Id": "ParamTKSXSF",
-      "Segments": [
-        0,
-        0,
-        0,
-        31.87,
-        0
-      ]
-    },
-    {
-      "Target": "Parameter",
-      "Id": "ParamBrowLY",
-      "Segments": [
-        0,
-        0,
-        0,
-        31.87,
-        0
-      ]
-    },
-    {
-      "Target": "Parameter",
-      "Id": "ParamBrowLX",
       "Segments": [
         0,
         0,

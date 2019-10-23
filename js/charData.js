@@ -1,4 +1,5 @@
 ﻿var charData = {
+    "Gneisenau (Nightmarish Succubus)": "genaisennao_2", 
     "Surcouf (Shopping Time!)": "xukufu_2", 
     "Shoukaku (Dancing Crane in the Wind)": "xianghe_2", 
     "Zara (Poolside Coincidence)": "zhala_2", 

@@ -4,9 +4,9 @@
     "Duration": 7.47,
     "Fps": 30.0,
     "Loop": true,
-    "CurveCount": 150,
-    "TotalSegmentCount": 646,
-    "TotalPointCount": 1064,
+    "CurveCount": 147,
+    "TotalSegmentCount": 640,
+    "TotalPointCount": 1058,
     "UserDataCount": 2,
     "TotalUserDataSize": 0
   },
@@ -3092,26 +3092,6 @@
       ]
     },
     {
-      "Target": "Parameter",
-      "Id": "ParamMouthOpenY",
-      "Segments": [
-        0,
-        0,
-        2,
-        1.4,
-        0,
-        0,
-        2.167,
-        1,
-        0,
-        4.433,
-        0,
-        2,
-        7.467,
-        0
-      ]
-    },
-    {
       "Target": "PartOpacity",
       "Id": "beijing",
       "Segments": [
@@ -3864,28 +3844,6 @@
     {
       "Target": "Parameter",
       "Id": "ParamTKSXSF",
-      "Segments": [
-        0,
-        0,
-        0,
-        7.47,
-        0
-      ]
-    },
-    {
-      "Target": "Parameter",
-      "Id": "ParamBrowLY",
-      "Segments": [
-        0,
-        0,
-        0,
-        7.47,
-        0
-      ]
-    },
-    {
-      "Target": "Parameter",
-      "Id": "ParamBrowLX",
       "Segments": [
         0,
         0,

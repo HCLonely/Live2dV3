@@ -4,9 +4,9 @@
     "Duration": 5.133,
     "Fps": 30.0,
     "Loop": true,
-    "CurveCount": 157,
-    "TotalSegmentCount": 536,
-    "TotalPointCount": 986,
+    "CurveCount": 155,
+    "TotalSegmentCount": 532,
+    "TotalPointCount": 982,
     "UserDataCount": 2,
     "TotalUserDataSize": 0
   },
@@ -2924,7 +2924,10 @@
         0,
         2.567,
         0,
-        2,
+        0,
+        3.3,
+        -0.8,
+        0,
         5.133,
         0
       ]
@@ -2958,26 +2961,6 @@
         2,
         5.133,
         1
-      ]
-    },
-    {
-      "Target": "Parameter",
-      "Id": "ParamMouthOpenY",
-      "Segments": [
-        0,
-        0,
-        0,
-        0.4,
-        1,
-        2,
-        3.3,
-        1,
-        0,
-        3.633,
-        0,
-        2,
-        5.133,
-        0
       ]
     },
     {
@@ -3389,28 +3372,6 @@
     },
     {
       "Target": "Parameter",
-      "Id": "ParamBrowLY",
-      "Segments": [
-        0,
-        0,
-        0,
-        5.133,
-        0
-      ]
-    },
-    {
-      "Target": "Parameter",
-      "Id": "ParamBrowLX",
-      "Segments": [
-        0,
-        0,
-        0,
-        5.133,
-        0
-      ]
-    },
-    {
-      "Target": "Parameter",
       "Id": "ParamBrowRY",
       "Segments": [
         0,
@@ -3434,6 +3395,17 @@
     {
       "Target": "Parameter",
       "Id": "ParamBrowRAngle",
+      "Segments": [
+        0,
+        0,
+        0,
+        5.133,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamMouthOpenY",
       "Segments": [
         0,
         0,

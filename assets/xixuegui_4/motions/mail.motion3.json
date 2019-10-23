@@ -4,9 +4,9 @@
     "Duration": 5.133,
     "Fps": 30.0,
     "Loop": true,
-    "CurveCount": 156,
-    "TotalSegmentCount": 492,
-    "TotalPointCount": 882,
+    "CurveCount": 154,
+    "TotalSegmentCount": 490,
+    "TotalPointCount": 880,
     "UserDataCount": 2,
     "TotalUserDataSize": 0
   },
@@ -3306,28 +3306,6 @@
     {
       "Target": "Parameter",
       "Id": "ParamEyeRSmile",
-      "Segments": [
-        0,
-        0,
-        0,
-        5.133,
-        0
-      ]
-    },
-    {
-      "Target": "Parameter",
-      "Id": "ParamBrowLY",
-      "Segments": [
-        0,
-        0,
-        0,
-        5.133,
-        0
-      ]
-    },
-    {
-      "Target": "Parameter",
-      "Id": "ParamBrowLX",
       "Segments": [
         0,
         0,

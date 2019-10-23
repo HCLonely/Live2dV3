@@ -4,9 +4,9 @@
     "Duration": 18.2,
     "Fps": 30.0,
     "Loop": true,
-    "CurveCount": 137,
-    "TotalSegmentCount": 1042,
-    "TotalPointCount": 2146,
+    "CurveCount": 185,
+    "TotalSegmentCount": 1090,
+    "TotalPointCount": 2194,
     "UserDataCount": 1,
     "TotalUserDataSize": 0
   },
@@ -81,7 +81,7 @@
         -30,
         1,
         6.067,
-        -29.379,
+        -30,
         12.133,
         -10.45,
         18.2,
@@ -831,7 +831,7 @@
         17.467,
         30,
         17.833,
-        15.628,
+        19.547,
         18.2,
         0
       ]
@@ -1183,7 +1183,7 @@
         17.467,
         30,
         17.833,
-        19.586,
+        19.914,
         18.2,
         0
       ]
@@ -1293,7 +1293,7 @@
         17.467,
         12,
         17.833,
-        8.915,
+        8.039,
         18.2,
         0
       ]
@@ -1403,7 +1403,7 @@
         17.378,
         11,
         17.789,
-        8.182,
+        7.371,
         18.2,
         0
       ]
@@ -1462,7 +1462,7 @@
         16.667,
         -16,
         17.433,
-        -12.123,
+        -10.702,
         18.2,
         0
       ]
@@ -1572,7 +1572,7 @@
         17.533,
         -8,
         17.867,
-        -6.264,
+        -5.381,
         18.2,
         0
       ]
@@ -1924,7 +1924,7 @@
         17.733,
         16,
         17.967,
-        10.497,
+        10.598,
         18.2,
         0
       ]
@@ -2276,7 +2276,7 @@
         17.733,
         12,
         17.967,
-        8.933,
+        8.054,
         18.2,
         0
       ]
@@ -2716,7 +2716,7 @@
         17.733,
         15,
         17.967,
-        11.34,
+        10.079,
         18.2,
         0
       ]
@@ -3068,7 +3068,7 @@
         17.733,
         16,
         17.967,
-        12.033,
+        10.745,
         18.2,
         0
       ]
@@ -3420,7 +3420,7 @@
         17.733,
         6,
         17.967,
-        4.843,
+        4.057,
         18.2,
         0
       ]
@@ -4076,7 +4076,7 @@
         17.733,
         -11,
         17.967,
-        -7.812,
+        -7.345,
         18.2,
         0
       ]
@@ -4428,7 +4428,7 @@
         17.733,
         -12,
         17.967,
-        -7.056,
+        -7.848,
         18.2,
         0
       ]
@@ -4538,7 +4538,7 @@
         17.622,
         0.4,
         17.911,
-        0.333,
+        0.271,
         18.2,
         0
       ]
@@ -5034,7 +5034,7 @@
         17.333,
         -0.5,
         17.767,
-        -0.325,
+        -0.332,
         18.2,
         0
       ]
@@ -5604,6 +5604,138 @@
     },
     {
       "Target": "Parameter",
+      "Id": "Paramxwx",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "Paramxwy",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "XWTMD",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamXWQH",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "XWDX",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamHX",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamHXX",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamKS",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamLS",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamXF",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamXWDYC",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "XWXZ",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
       "Id": "ParamHMCX",
       "Segments": [
         0,
@@ -5649,6 +5781,28 @@
     {
       "Target": "Parameter",
       "Id": "ParamXSD",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamXYJS",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamXYCX",
       "Segments": [
         0,
         0,
@@ -5747,7 +5901,205 @@
     },
     {
       "Target": "Parameter",
+      "Id": "ParamSBQ",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
       "Id": "ParamDDXZ",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamQSC",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamYQBDSD",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamYS1",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamYS11",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamYS3",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamYS2",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamYSZ1",
+      "Segments": [
+        0,
+        15,
+        0,
+        18.2,
+        15
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamYS1Z1SX",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamYS1Z2",
+      "Segments": [
+        0,
+        15,
+        0,
+        18.2,
+        15
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "Paramys1z3",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamYS1Z4",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamYS1Z5",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamYSZK",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamYS1ZK",
+      "Segments": [
+        0,
+        -30,
+        0,
+        18.2,
+        -30
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamHJBX",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamHJBY",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamHJBC",
       "Segments": [
         0,
         0,
@@ -5770,6 +6122,17 @@
     {
       "Target": "Parameter",
       "Id": "ParamZQBDXZ",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamZBQS",
       "Segments": [
         0,
         0,
@@ -5835,7 +6198,117 @@
     },
     {
       "Target": "Parameter",
+      "Id": "ParamZB2DTCQH",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamZCBQDX",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamZXCGBY",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamYCBX",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamYCBY",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamBXZB",
+      "Segments": [
+        0,
+        -30,
+        0,
+        18.2,
+        -30
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamCB1",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamCB2",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
       "Id": "ParamBodyAngleX",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamZJB",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamYJB",
       "Segments": [
         0,
         0,
@@ -5857,6 +6330,17 @@
     },
     {
       "Target": "Parameter",
+      "Id": "ParamSRQS",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
       "Id": "ParamBodyAngleZ",
       "Segments": [
         0,
@@ -5868,7 +6352,40 @@
     },
     {
       "Target": "Parameter",
+      "Id": "ParamYDTSS",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamYXTSS",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
       "Id": "ParamYJ",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamZTTQ",
       "Segments": [
         0,
         0,
@@ -5956,6 +6473,17 @@
     },
     {
       "Target": "Parameter",
+      "Id": "ParamYL",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
       "Id": "ParamEyeLSmile",
       "Segments": [
         0,
@@ -5968,6 +6496,17 @@
     {
       "Target": "Parameter",
       "Id": "ParamEyeRSmile",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamGGSD",
       "Segments": [
         0,
         0,
@@ -6022,28 +6561,6 @@
     },
     {
       "Target": "Parameter",
-      "Id": "ParamBrowLY",
-      "Segments": [
-        0,
-        0,
-        0,
-        18.2,
-        0
-      ]
-    },
-    {
-      "Target": "Parameter",
-      "Id": "ParamBrowLX",
-      "Segments": [
-        0,
-        0,
-        0,
-        18.2,
-        0
-      ]
-    },
-    {
-      "Target": "Parameter",
       "Id": "ParamBrowRY",
       "Segments": [
         0,
@@ -6078,6 +6595,17 @@
     {
       "Target": "Parameter",
       "Id": "ParamBrowRAngle",
+      "Segments": [
+        0,
+        0,
+        0,
+        18.2,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamZCSDS",
       "Segments": [
         0,
         0,
