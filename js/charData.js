@@ -1,4 +1,8 @@
 ﻿var charData = {
+    "Ping Hai (Dragon Sisters! [P])": "pinghai_4",
+    "Ning Hai (Dragon Sisters! [N])": "ninghai_4",
+    "Eldridge (Nyan Nyan Idol?)": "aierdeliqi_5",
+    "Admiral Graf Spee (Ironblood ♡ Kawaii)": "sipeibojue_5",
     "Gneisenau (Nightmarish Succubus)": "genaisennao_2", 
     "Surcouf (Shopping Time!)": "xukufu_2", 
     "Shoukaku (Dancing Crane in the Wind)": "xianghe_2", 
