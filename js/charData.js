@@ -1,4 +1,7 @@
 ﻿var charData = {
+    "Suruga (Hundred Flowers' Auspice)": "junhe_5",
+    "Ryuuhou (Firebird's New Year Dance)": "longfeng_2",
+    "Noshiro (Uncharted Festival Grounds?)": "nengdai_2",
     "Ping Hai (Dragon Sisters! [P])": "pinghai_4",
     "Ning Hai (Dragon Sisters! [N])": "ninghai_4",
     "Eldridge (Nyan Nyan Idol?)": "aierdeliqi_5",

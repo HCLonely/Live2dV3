@@ -5,9 +5,9 @@
     "Fps": 30.0,
     "Loop": true,
     "AreBeziersRestricted": true,
-    "CurveCount": 191,
-    "TotalSegmentCount": 563,
-    "TotalPointCount": 737,
+    "CurveCount": 193,
+    "TotalSegmentCount": 572,
+    "TotalPointCount": 746,
     "UserDataCount": 2,
     "TotalUserDataSize": 0
   },
@@ -248,6 +248,35 @@
     },
     {
       "Target": "Parameter",
+      "Id": "ParamAngleX",
+      "Segments": [
+        0,
+        0,
+        0,
+        0.533,
+        10,
+        0,
+        0.933,
+        -26,
+        0,
+        1.367,
+        19,
+        0,
+        1.733,
+        -26,
+        0,
+        2.267,
+        13,
+        0,
+        2.533,
+        0,
+        2,
+        4.433,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
       "Id": "pnghailianX",
       "Segments": [
         0,
@@ -270,6 +299,20 @@
         0,
         2.533,
         -0.18,
+        0,
+        4.433,
+        0
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Id": "ParamAngleY",
+      "Segments": [
+        0,
+        0,
+        0,
+        1.133,
+        -15,
         0,
         4.433,
         0

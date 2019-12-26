@@ -4,9 +4,10 @@
     "Duration": 11.2,
     "Fps": 30.0,
     "Loop": true,
-    "CurveCount": 185,
-    "TotalSegmentCount": 1744,
-    "TotalPointCount": 3332,
+    "AreBeziersRestricted": true,
+    "CurveCount": 184,
+    "TotalSegmentCount": 1743,
+    "TotalPointCount": 3331,
     "UserDataCount": 2,
     "TotalUserDataSize": 0
   },
@@ -9624,17 +9625,6 @@
     {
       "Target": "PartOpacity",
       "Id": "ArtMesh128_Skinning",
-      "Segments": [
-        0,
-        1,
-        2,
-        11.2,
-        1
-      ]
-    },
-    {
-      "Target": "2422911982",
-      "Id": "2422911982",
       "Segments": [
         0,
         1,
