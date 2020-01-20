@@ -228,10 +228,10 @@
             "Id": "Param13"
           },
           "VertexIndex": 1,
-          "Scale": 20,
+          "Scale": 5,
           "Weight": 100,
           "Type": "Angle",
-          "Reflect": false
+          "Reflect": true
         },
         {
           "Destination": {
@@ -239,10 +239,10 @@
             "Id": "Param14"
           },
           "VertexIndex": 2,
-          "Scale": 20,
+          "Scale": 5,
           "Weight": 100,
           "Type": "Angle",
-          "Reflect": false
+          "Reflect": true
         },
         {
           "Destination": {
@@ -250,10 +250,10 @@
             "Id": "Param15"
           },
           "VertexIndex": 3,
-          "Scale": 20,
+          "Scale": 5,
           "Weight": 100,
           "Type": "Angle",
-          "Reflect": false
+          "Reflect": true
         },
         {
           "Destination": {
@@ -261,10 +261,10 @@
             "Id": "Param16"
           },
           "VertexIndex": 4,
-          "Scale": 20,
+          "Scale": 5,
           "Weight": 100,
           "Type": "Angle",
-          "Reflect": false
+          "Reflect": true
         }
       ],
       "Vertices": [
@@ -645,7 +645,7 @@
           "Scale": 18,
           "Weight": 100,
           "Type": "Angle",
-          "Reflect": false
+          "Reflect": true
         },
         {
           "Destination": {
@@ -656,7 +656,7 @@
           "Scale": 18,
           "Weight": 100,
           "Type": "Angle",
-          "Reflect": false
+          "Reflect": true
         },
         {
           "Destination": {
@@ -667,7 +667,7 @@
           "Scale": 18,
           "Weight": 100,
           "Type": "Angle",
-          "Reflect": false
+          "Reflect": true
         },
         {
           "Destination": {
@@ -678,7 +678,7 @@
           "Scale": 18,
           "Weight": 100,
           "Type": "Angle",
-          "Reflect": false
+          "Reflect": true
         }
       ],
       "Vertices": [
