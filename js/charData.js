@@ -1,4 +1,7 @@
 ﻿var charData = {
+    "Taihou (Phoenix's Spring Song)": "dafeng_4",
+    "Azuma (Soft Voice of Spring)": "wuqi_2",
+    "Yukikaze (Winter's Snowy Wind)": "xuefeng_3",
     "Suruga (Hundred Flowers' Auspice)": "junhe_5",
     "Ryuuhou (Firebird's New Year Dance)": "longfeng_2",
     "Noshiro (Uncharted Festival Grounds?)": "nengdai_2",
