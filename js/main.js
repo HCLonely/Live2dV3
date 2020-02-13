@@ -255,7 +255,6 @@ function onChangeLog(){
             $('#selector').remove();
             $('#darken').remove();
             $(document.body).css("overflow", "auto");
-            viewer.searchResults = charData;
         }))
     .append($("<div></div>")
         .attr("id","selector")

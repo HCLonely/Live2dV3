@@ -1,4 +1,5 @@
 ﻿var charData = {
+    "Aurora (Heritage of Yu City)": "ouruola_4",
     "Taihou (Phoenix's Spring Song)": "dafeng_4",
     "Azuma (Soft Voice of Spring)": "wuqi_2",
     "Yukikaze (Winter's Snowy Wind)": "xuefeng_3",
