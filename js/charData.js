@@ -1,4 +1,5 @@
 ﻿var charData = {
+    "Grozny (Bad Bunny Behind Bars)": "weiyan_2",
     "Aurora (Heritage of Yu City)": "ouruola_4",
     "Taihou (Phoenix's Spring Song)": "dafeng_4",
     "Azuma (Soft Voice of Spring)": "wuqi_2",
