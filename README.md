@@ -1,12 +1,17 @@
 在网页上添加 `.moc3` 格式的Live2d模型
 
+Add a Live2d model in the format of `.moc3` to your web page
+
 [Demo](https://live2dv3demo.hclonely.com/)
 
-# 使用
+# 使用(Usage)
 
-在你的网页`</body>`标签之前添加一下内容：
+在你的网页`</body>`标签之前添加以下内容：
+
+Add the following before the `</body>` tag of your web page: 
+
 ```
-<!-- 位置可自定义 -->
+<!-- 位置可自定义 | Location can be customized-->
 <div class="Canvas" style="position: fixed; right: 10px; bottom: 10px;" id="L2dCanvas"></div>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
@@ -17,8 +22,8 @@
 <script>
     $(document).ready(() => {
         new l2dViewer({
-            basePath: 'https://cdn.jsdelivr.net/gh/HCLonely/Live2dV3/',// 模型根目录
-            modelName: 'biaoqiang_3',// 模型名称
+            basePath: 'https://cdn.jsdelivr.net/gh/HCLonely/Live2dV3/assets',// 模型根目录 | Model root directory
+            modelName: 'biaoqiang_3',// 模型名称 | Model name
             width: 500,
             height: 300
         })
