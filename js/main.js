@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  var v = new l2dViewer({ basePath: 'assets', modelName: 'lafei_4', width: 400, height: 500 })
+    var v = new l2dViewer({ basePath: 'assets', modelName: 'biaoqiang_3', width:500, height:300 })
 })
 
 class l2dViewer {
@@ -24,13 +24,13 @@ class l2dViewer {
     window.onresize = (event) => {
       if (event === void 0) { event = null }
       this.app.view.style.width = width + 'px'
-      this.app.view.style.height = height + 'px'
+        this.app.view.style.height = height + 'px'
       this.app.renderer.resize(width, height)
 
       if (this.model) {
-        this.model.position = new PIXI.Point((width * 0.5), (height * 0.5))
+          this.model.position = new PIXI.Point((width * 0.5), (height * 0.5))
         this.model.scale = new PIXI.Point((this.model.position.x * 0.06), (this.model.position.x * 0.06))
-        this.model.masks.resize(this.app.view.width*2, this.app.view.height*2)
+        this.model.masks.resize(this.app.view.width, this.app.view.height)
       }
     }
     this.isClick = false

@@ -1,2 +1,2 @@
-# AzurLaneL2DViewer
+# L2DViewerV3
 

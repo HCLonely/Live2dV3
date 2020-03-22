@@ -1,37 +1,32 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
     <meta charset="utf-8" />
-    <title>Azur Lane Live2D Viewer</title>
+    <title>Live2D Viewer V3 Demo</title>
 
 </head>
-<body style="background-color: #494a5a; color: white;">
-    <!-- Canvas -->
-    <div align="center">
-        <div class="Canvas" style="position: fixed; right: 10px; bottom: 10px;" id="L2dCanvas"></div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.slim.min.js">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js">
-    </script>
+<body style="background-color: #00ff00;">
+    <div class="Canvas" style="position: fixed; right: 10px; bottom: 10px;" id="L2dCanvas"></div>
 
-    <!-- Promise-polyfill -->
-    <script src = "https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js "> </script>
-    
-    <!-- Live2DCubismCore -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"> </script>
     <script src="js/live2dcubismcore.min.js"></script>
-
-    <!-- Include Pixi. -->
     <script src="https://cdn.jsdelivr.net/npm/pixi.js@4.6.1/dist/pixi.min.js"></script>
-
-    <!-- Include Cubism Components. -->
-    <script src="js/live2dcubismframework.js"></script>
-    <script src="js/live2dcubismpixi.js"></script>
-
-    <!-- User's Script -->
-    <script src = "js/l2d.js"></script>
-    <script src = "js/main.js"></script>
+    <script src="/live2dv3.js"></script>
+    <script>
+        $(document).ready(() => {
+            new l2dViewer({
+                basePath: 'assets',
+                modelName: 'biaoqiang_3',
+                width: 500,
+                height: 300
+            })
+        })
+    </script>
 </body>
+
 </html>
