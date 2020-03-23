@@ -23,8 +23,9 @@
     <script>
         $(document).ready(() => {
             new l2dViewer({
-                basePath: 'https://cdn.jsdelivr.net/gh/HCLonely/Live2dV3/assets/',
-                modelName: 'biaoqiang_3',
+                el: $('.Canvas'), // 要添加Live2d的元素, jQuery选择器 | To add Live2d elements, jQuery selector
+                basePath: 'https://cdn.jsdelivr.net/gh/HCLonely/Live2dV3/assets', // 模型根目录 | Model root directory
+                modelName: 'biaoqiang_3', // 模型名称 | Model name
                 width: 500,
                 height: 300
             })

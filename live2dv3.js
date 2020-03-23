@@ -1,7 +1,7 @@
 var LIVE2DCUBISMFRAMEWORK;
 (function (LIVE2DCUBISMFRAMEWORK) {
   var AnimationPoint = (function () {
-    function AnimationPoint(time, value) {
+    function AnimationPoint (time, value) {
       this.time = time
       this.value = value
     }
@@ -9,7 +9,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.AnimationPoint = AnimationPoint
   var AnimationUserDataBody = (function () {
-    function AnimationUserDataBody(time, value) {
+    function AnimationUserDataBody (time, value) {
       this.time = time
       this.value = value
     }
@@ -18,7 +18,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.AnimationUserDataBody = AnimationUserDataBody
   var BuiltinAnimationSegmentEvaluators = (function () {
-    function BuiltinAnimationSegmentEvaluators() {
+    function BuiltinAnimationSegmentEvaluators () {
     }
     BuiltinAnimationSegmentEvaluators.lerp = function (a, b, t) {
       return new AnimationPoint((a.time + ((b.time - a.time) * t)), (a.value + ((b.value - a.value) * t)))
@@ -48,7 +48,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.BuiltinAnimationSegmentEvaluators = BuiltinAnimationSegmentEvaluators
   var AnimationSegment = (function () {
-    function AnimationSegment(offset, evaluate) {
+    function AnimationSegment (offset, evaluate) {
       this.offset = offset
       this.evaluate = evaluate
     }
@@ -56,7 +56,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.AnimationSegment = AnimationSegment
   var AnimationTrack = (function () {
-    function AnimationTrack(targetId, points, segments) {
+    function AnimationTrack (targetId, points, segments) {
       this.targetId = targetId
       this.points = points
       this.segments = segments
@@ -76,7 +76,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.AnimationTrack = AnimationTrack
   var Animation = (function () {
-    function Animation(motion3Json) {
+    function Animation (motion3Json) {
       var _this = this
       this.modelTracks = new Array()
       this.parameterTracks = new Array()
@@ -237,7 +237,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.Animation = Animation
   var BuiltinCrossfadeWeighters = (function () {
-    function BuiltinCrossfadeWeighters() {
+    function BuiltinCrossfadeWeighters () {
     }
     BuiltinCrossfadeWeighters.LINEAR = function (time, duration) {
       return (time / duration)
@@ -246,13 +246,13 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.BuiltinCrossfadeWeighters = BuiltinCrossfadeWeighters
   var AnimationState = (function () {
-    function AnimationState() {
+    function AnimationState () {
     }
     return AnimationState
   }())
   LIVE2DCUBISMFRAMEWORK.AnimationState = AnimationState
   var BuiltinAnimationBlenders = (function () {
-    function BuiltinAnimationBlenders() {
+    function BuiltinAnimationBlenders () {
     }
     BuiltinAnimationBlenders.OVERRIDE = function (source, destination, initial, weight) {
       return ((destination * weight) + source * (1 - weight))
@@ -267,7 +267,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.BuiltinAnimationBlenders = BuiltinAnimationBlenders
   var AnimationLayer = (function () {
-    function AnimationLayer() {
+    function AnimationLayer () {
       this.weight = 1
     }
     Object.defineProperty(AnimationLayer.prototype, 'currentAnimation', {
@@ -354,7 +354,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.AnimationLayer = AnimationLayer
   var Animator = (function () {
-    function Animator(target, timeScale, layers) {
+    function Animator (target, timeScale, layers) {
       this._target = target
       this.timeScale = timeScale
       this._layers = layers
@@ -436,7 +436,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.Animator = Animator
   var AnimatorBuilder = (function () {
-    function AnimatorBuilder() {
+    function AnimatorBuilder () {
       this._timeScale = 1
       this._layerNames = new Array()
       this._layerBlenders = new Array()
@@ -475,7 +475,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.AnimatorBuilder = AnimatorBuilder
   var PhysicsVector2 = (function () {
-    function PhysicsVector2(x, y) {
+    function PhysicsVector2 (x, y) {
       this.x = x
       this.y = y
     }
@@ -526,7 +526,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.PhysicsVector2 = PhysicsVector2
   var Physics = (function () {
-    function Physics() {
+    function Physics () {
     }
     Physics.clampScalar = function (scalar, lower, upper) {
       if (scalar < lower) {
@@ -574,7 +574,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.Physics = Physics
   var PhysicsParticle = (function () {
-    function PhysicsParticle(initialPosition, mobility, delay, acceleration, radius) {
+    function PhysicsParticle (initialPosition, mobility, delay, acceleration, radius) {
       this.initialPosition = initialPosition
       this.mobility = mobility
       this.delay = delay
@@ -590,7 +590,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.PhysicsParticle = PhysicsParticle
   var PhysicsFactorTuple = (function () {
-    function PhysicsFactorTuple(x, y, angle) {
+    function PhysicsFactorTuple (x, y, angle) {
       this.x = x
       this.y = y
       this.angle = angle
@@ -605,7 +605,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.PhysicsFactorTuple = PhysicsFactorTuple
   var PhysicsNormalizationTuple = (function () {
-    function PhysicsNormalizationTuple(minimum, maximum, def) {
+    function PhysicsNormalizationTuple (minimum, maximum, def) {
       this.minimum = minimum
       this.maximum = maximum
       this.def = def
@@ -614,7 +614,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.PhysicsNormalizationTuple = PhysicsNormalizationTuple
   var PhysicsNormalizationOptions = (function () {
-    function PhysicsNormalizationOptions(position, angle) {
+    function PhysicsNormalizationOptions (position, angle) {
       this.position = position
       this.angle = angle
     }
@@ -622,7 +622,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.PhysicsNormalizationOptions = PhysicsNormalizationOptions
   var PhysicsInput = (function () {
-    function PhysicsInput(targetId, weight, factor, invert) {
+    function PhysicsInput (targetId, weight, factor, invert) {
       this.targetId = targetId
       this.weight = weight
       this.factor = factor
@@ -695,7 +695,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.PhysicsInput = PhysicsInput
   var PhysicsOutput = (function () {
-    function PhysicsOutput(targetId, particleIndex, weight, angleScale, factor, invert) {
+    function PhysicsOutput (targetId, particleIndex, weight, angleScale, factor, invert) {
       this.targetId = targetId
       this.particleIndex = particleIndex
       this.weight = weight
@@ -730,7 +730,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.PhysicsOutput = PhysicsOutput
   var PhysicsSubRig = (function () {
-    function PhysicsSubRig(input, output, particles, normalization) {
+    function PhysicsSubRig (input, output, particles, normalization) {
       this.input = input
       this.output = output
       this.particles = particles
@@ -818,7 +818,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.PhysicsSubRig = PhysicsSubRig
   var PhysicsRig = (function () {
-    function PhysicsRig(target, timeScale, physics3Json) {
+    function PhysicsRig (target, timeScale, physics3Json) {
       var _this = this
       this.timeScale = 1
       this.timeScale = timeScale
@@ -895,7 +895,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.PhysicsRig = PhysicsRig
   var PhysicsRigBuilder = (function () {
-    function PhysicsRigBuilder() {
+    function PhysicsRigBuilder () {
       this._timeScale = 1
     }
     PhysicsRigBuilder.prototype.setTarget = function (value) {
@@ -917,7 +917,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.PhysicsRigBuilder = PhysicsRigBuilder
   var UserData = (function () {
-    function UserData(target, userData3Json) {
+    function UserData (target, userData3Json) {
       var _this = this
       this._target = target
       if (!target) {
@@ -1007,7 +1007,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.UserData = UserData
   var UserDataBuilder = (function () {
-    function UserDataBuilder() {
+    function UserDataBuilder () {
     }
     UserDataBuilder.prototype.setTarget = function (value) {
       this._target = value
@@ -1023,7 +1023,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.UserDataBuilder = UserDataBuilder
   var UserDataBody = (function () {
-    function UserDataBody(target, id, value) {
+    function UserDataBody (target, id, value) {
       this.target = target
       this.id = id
       this.value = value
@@ -1037,7 +1037,7 @@ var LIVE2DCUBISMFRAMEWORK;
     UserDataTargetType[UserDataTargetType.ArtMesh = 1] = 'ArtMesh'
   })(UserDataTargetType || (UserDataTargetType = {}))
   var Groups = (function () {
-    function Groups(model3Json) {
+    function Groups (model3Json) {
       var _this = this
       if (typeof (model3Json.Groups) !== 'undefined') {
         this._groupBodys = new Array()
@@ -1072,7 +1072,7 @@ var LIVE2DCUBISMFRAMEWORK;
   }())
   LIVE2DCUBISMFRAMEWORK.Groups = Groups
   var GroupBody = (function () {
-    function GroupBody(target, name, ids) {
+    function GroupBody (target, name, ids) {
       this.target = target
       this.name = name
       this.ids = ids
@@ -1091,7 +1091,7 @@ var __extends = (this && this.__extends) || (function () {
   }
   return function (d, b) {
     extendStatics(d, b)
-    function __() { this.constructor = d }
+    function __ () { this.constructor = d }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __())
   }
 })()
@@ -1099,7 +1099,7 @@ var LIVE2DCUBISMPIXI;
 (function (LIVE2DCUBISMPIXI) {
   var Model = (function (_super) {
     __extends(Model, _super)
-    function Model(coreModel, textures, animator, physicsRig, userData, groups) {
+    function Model (coreModel, textures, animator, physicsRig, userData, groups) {
       var _this = _super.call(this) || this
       _this._coreModel = coreModel
       _this._textures = textures
@@ -1298,7 +1298,7 @@ var LIVE2DCUBISMPIXI;
   LIVE2DCUBISMPIXI.Model = Model
   var MaskSpriteContainer = (function (_super) {
     __extends(MaskSpriteContainer, _super)
-    function MaskSpriteContainer(coreModel, pixiModel) {
+    function MaskSpriteContainer (coreModel, pixiModel) {
       var _this = _super.call(this) || this
       _this._maskShaderVertSrc = new String('\n            attribute vec2 aVertexPosition;\n            attribute vec2 aTextureCoord;\n            uniform mat3 projectionMatrix;\n            varying vec2 vTextureCoord;\n            void main(void){\n                gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n                vTextureCoord = aTextureCoord;\n            }\n            ')
       _this._maskShaderFragSrc = new String('\n            varying vec2 vTextureCoord;\n            uniform sampler2D uSampler;\n            void main(void){\n                vec4 c = texture2D(uSampler, vTextureCoord);\n                c.r = c.a;\n                c.g = 0.0;\n                c.b = 0.0;\n                gl_FragColor = c;\n            }\n            ')
@@ -1377,7 +1377,7 @@ var LIVE2DCUBISMPIXI;
   }(PIXI.Container))
   LIVE2DCUBISMPIXI.MaskSpriteContainer = MaskSpriteContainer
   var ModelBuilder = (function () {
-    function ModelBuilder() {
+    function ModelBuilder () {
       this._textures = new Array()
       this._timeScale = 1
       this._animatorBuilder = new LIVE2DCUBISMFRAMEWORK.AnimatorBuilder()
@@ -1473,7 +1473,7 @@ var LIVE2DCUBISMPIXI;
   LIVE2DCUBISMPIXI.ModelBuilder = ModelBuilder
   var CubismMesh = (function (_super) {
     __extends(CubismMesh, _super)
-    function CubismMesh() {
+    function CubismMesh () {
       var _this = _super !== null && _super.apply(this, arguments) || this
       _this.isCulling = false
       _this.isMaskMesh = false
@@ -1491,7 +1491,7 @@ var LIVE2DCUBISMPIXI;
 })(LIVE2DCUBISMPIXI || (LIVE2DCUBISMPIXI = {}))
 
 class L2D {
-  constructor(basePath) {
+  constructor (basePath) {
     this.basePath = basePath
     this.loader = new PIXI.loaders.Loader(this.basePath)
     this.animatorBuilder = new LIVE2DCUBISMFRAMEWORK.AnimatorBuilder()
@@ -1499,7 +1499,7 @@ class L2D {
     this.models = {}
   }
 
-  setPhysics3Json(value) {
+  setPhysics3Json (value) {
     if (!this.physicsRigBuilder) {
       this.physicsRigBuilder = new LIVE2DCUBISMFRAMEWORK.PhysicsRigBuilder()
     }
@@ -1508,7 +1508,7 @@ class L2D {
     return this
   }
 
-  load(name, v) {
+  load (name, v) {
     if (!this.models[name]) {
       const modelDir = name + '/'
       const modelPath = name + '.model3.json'
@@ -1614,10 +1614,10 @@ class L2D {
   }
 }
 class l2dViewer {
-  constructor({ basePath, modelName, width, height }) {
+  constructor ({ basePath, modelName, width, height, el }) {
     this.l2d = new L2D(basePath)
 
-    this.canvas = $('.Canvas')
+    this.canvas = el
 
     this.l2d.load(modelName, this)
 
@@ -1685,7 +1685,7 @@ class l2dViewer {
     })
   }
 
-  changeCanvas(model) {
+  changeCanvas (model) {
     this.app.stage.removeChildren()
 
     this.model = model
@@ -1698,7 +1698,7 @@ class l2dViewer {
     window.onresize()
   }
 
-  onUpdate(delta) {
+  onUpdate (delta) {
     const deltaTime = 0.016 * delta
 
     if (!this.animator.isPlaying) {
@@ -1749,7 +1749,7 @@ class l2dViewer {
     this._coreModel.drawables.resetDynamicFlags()
   }
 
-  startAnimation(motionId, layerId) {
+  startAnimation (motionId, layerId) {
     if (!this.model) {
       return
     }
@@ -1767,7 +1767,7 @@ class l2dViewer {
     l.play(m)
   }
 
-  isHit(id, posX, posY) {
+  isHit (id, posX, posY) {
     if (!this.model) {
       return false
     }
