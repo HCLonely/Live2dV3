@@ -1,3 +1,5 @@
+> 本项目基于[AzurLaneL2DViewer](https://github.com/alg-wiki/AzurLaneL2DViewer)修改
+
 在网页上添加 `.moc3` 格式的Live2d模型
 
 Add a Live2d model in the format of `.moc3` to your web page
