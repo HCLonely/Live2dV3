@@ -24,7 +24,7 @@ Add the following before the `</body>` tag of your web page:
 <script src="https://cdn.jsdelivr.net/npm/pixi.js@4.6.1/dist/pixi.min.js"></script>
 
 <!-- live2dv3.js -->
-<script src="https://cdn.jsdelivr.net/gh/HCLonely/Live2dV3/live2dv3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/HCLonely/Live2dV3@1.0.0/live2dv3.min.js"></script>
 
 <!-- 加载Live2d模型 | Load Live2d model -->
 <script>
