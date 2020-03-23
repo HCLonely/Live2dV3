@@ -12,7 +12,7 @@ Add the following before the `</body>` tag of your web page:
 
 ```
 <!-- 位置可自定义 | Location can be customized -->
-<div class="Canvas" style="position: fixed; right: 10px; bottom: 10px;" id="L2dCanvas"></div>
+<div class="Canvas" style="position: fixed; right: 10px; bottom: 10px;z-index: 99999999" id="L2dCanvas"></div>
 
 <!-- 依赖JS | Dependent JS -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.slim.min.js"></script>
