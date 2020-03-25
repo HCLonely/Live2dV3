@@ -1622,7 +1622,7 @@ class l2dViewer {
     this.l2d.load(modelName, this)
 
     this.app = new PIXI.Application(width, height, { transparent: true })
-    this.canvas.html(this.app.view)
+    this.canvas.appendChild(this.app.view)
 
     this.app.ticker.add((deltaTime) => {
       if (!this.model) {
