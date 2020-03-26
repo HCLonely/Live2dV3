@@ -1,3 +1,5 @@
+![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hm/HCLonely/Live2dV3)
+
 > 本项目基于[AzurLaneL2DViewer](https://github.com/alg-wiki/AzurLaneL2DViewer)修改
 
 在网页上添加 `.moc3` 格式的Live2d模型
