@@ -1,4 +1,5 @@
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hm/HCLonely/Live2dV3)
+![GitHub file size in bytes](https://img.shields.io/github/size/HCLonely/Live2dV3/live2dv3.js)
 
 > 本项目基于[AzurLaneL2DViewer](https://github.com/alg-wiki/AzurLaneL2DViewer)修改
 
