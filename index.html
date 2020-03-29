@@ -10,20 +10,19 @@
 
 <body style="background-color: #00ff00;">
     <h1>第一次加载较慢，请耐心等待！</h1>
-    <h1>The first load slowly, please be patient!</h1>
     
     <div class="Canvas" style="position: fixed; right: 10px; bottom: 10px;z-index: 99999999" id="L2dCanvas"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"> </script>
-    <script src="https://cdn.jsdelivr.net/gh/HCLonely/Live2dV3/js/live2dcubismcore.min.js"></script>
+    <script src="https://s3-ap-northeast-1.amazonaws.com/cubism3.live2d.com/sdk/js_eap/live2dcubismcore.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pixi.js@4.6.1/dist/pixi.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/HCLonely/Live2dV3@1.1.1/live2dv3.min.js"></script>
     <script>
         window.onload = () => {
             new l2dViewer({
-                el: document.getElementById('L2dCanvas'), // 要添加Live2d的元素 | To add Live2d elements
-                basePath: 'https://cdn.jsdelivr.net/gh/HCLonely/Live2dV3/assets', // 模型根目录 | Model root directory
-                modelName: 'biaoqiang_3', // 模型名称 | Model name
+                el: document.getElementById('L2dCanvas'),
+                basePath: 'https://cdn.jsdelivr.net/gh/HCLonely/Live2dV3/assets',
+                modelName: 'biaoqiang_3',
                 width: 500,
                 height: 300
             })
