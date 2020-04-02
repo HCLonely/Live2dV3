@@ -14,7 +14,7 @@
 
 <!-- 依赖JS -->
 <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"> </script>
-<script src="https://s3-ap-northeast-1.amazonaws.com/cubism3.live2d.com/sdk/js_eap/live2dcubismcore.min.js"></script>
+<script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/pixi.js@4.6.1/dist/pixi.min.js"></script>
 <!-- live2dv3.js -->
 <script src="https://cdn.jsdelivr.net/gh/HCLonely/Live2dV3@1.1.1/live2dv3.min.js"></script>
