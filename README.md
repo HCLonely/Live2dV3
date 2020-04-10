@@ -17,7 +17,7 @@
 <script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/pixi.js@4.6.1/dist/pixi.min.js"></script>
 <!-- live2dv3.js -->
-<script src="https://cdn.jsdelivr.net/gh/HCLonely/Live2dV3@1.1.1/live2dv3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/HCLonely/Live2dV3@1.1.2/live2dv3.min.js"></script>
 
 <!-- 加载Live2d模型 -->
 <script>
@@ -27,7 +27,9 @@
             basePath: 'https://cdn.jsdelivr.net/gh/HCLonely/Live2dV3/assets', // 模型根目录
             modelName: 'biaoqiang_3', // 模型名称
             width: 500,
-            height: 300
+            height: 300,
+            sizeLimit: true, // 当窗口大小小于上面的宽或高时不加载模型
+            mobileLimit: true // 移动端不加载模型
         })
     }
 </script>

@@ -1614,9 +1614,12 @@ class L2D {
   }
 }
 class l2dViewer {
-  constructor ({ basePath, modelName, width, height, el }) {
+  constructor({ basePath, modelName, width, height, el, sizeLimit, mobileLimit }) {
     if (typeof Live2DCubismCore !== 'object') console.error('live2dv3 failed to load:\nMissing live2dcubismcore.js\nPlease add "https://cdn.jsdelivr.net/gh/HCLonely/Live2dV3/js/live2dcubismcore.min.js" to the "<script>" tag.\nLook at https://github.com/HCLonely/Live2dV3')
     if (typeof PIXI !== 'object') console.error('live2dv3 failed to load:\nMissing pixi.js\nPlease add "https://cdn.jsdelivr.net/npm/pixi.js@4.6.1/dist/pixi.min.js" to the "<script>" tag.\nLook at https://github.com/HCLonely/Live2dV3')
+
+    if (sizeLimit && (document.documentElement.clientWidth < width || document.documentElement.clientHeight < height)) return
+    if (mobileLimit && /Mobile|Mac OS|Android|iPhone|iPad/i.test(navigator.userAgent)) return
 
     this.l2d = new L2D(basePath)
 
