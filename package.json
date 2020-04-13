@@ -1,0 +1,35 @@
+{
+  "name": "live2dv3",
+  "version": "1.1.3",
+  "description": "在网页上添加 moc3 格式的Live2d模型 https://live2dv3demo.hclonely.com/",
+  "main": "live2dv3.js",
+  "scripts": {
+    "test": "standard live2dv3.js --verbose | snazzy",
+    "build": "standard live2dv3.js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HCLonely/Live2dV3.git"
+  },
+  "keywords": [
+    "live2d",
+    "moc3"
+  ],
+  "author": "HCLonely",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HCLonely/Live2dV3/issues"
+  },
+  "homepage": "https://github.com/HCLonely/Live2dV3#readme",
+  "devDependencies": {
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.3"
+  },
+  "standard": {
+    "globals": [
+      "PIXI",
+      "Live2DCubismCore",
+      "HTMLElement"
+    ]
+  }
+}

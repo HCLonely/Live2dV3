@@ -78,10 +78,10 @@ var LIVE2DCUBISMFRAMEWORK;
   var Animation = (function () {
     function Animation (motion3Json) {
       var _this = this
-      this.modelTracks = new Array()
-      this.parameterTracks = new Array()
-      this.partOpacityTracks = new Array()
-      this.userDataBodys = new Array()
+      this.modelTracks = []
+      this.parameterTracks = []
+      this.partOpacityTracks = []
+      this.userDataBodys = []
       this.duration = motion3Json.Meta.Duration
       this.fps = motion3Json.Meta.Fps
       this.loop = motion3Json.Meta.Loop
@@ -95,33 +95,33 @@ var LIVE2DCUBISMFRAMEWORK;
       }
       motion3Json.Curves.forEach(function (c) {
         var s = c.Segments
-        var points = new Array()
-        var segments = new Array()
+        var points = []
+        var segments = []
         points.push(new AnimationPoint(s[0], s[1]))
         for (var t = 2; t < s.length; t += 3) {
           var offset = points.length - 1
           var evaluate = BuiltinAnimationSegmentEvaluators.LINEAR
           var type = s[t]
-          if (type == 1) {
+          if (type === 1) {
             evaluate = BuiltinAnimationSegmentEvaluators.BEZIER
             points.push(new AnimationPoint(s[t + 1], s[t + 2]))
             points.push(new AnimationPoint(s[t + 3], s[t + 4]))
             t += 4
-          } else if (type == 2) {
+          } else if (type === 2) {
             evaluate = BuiltinAnimationSegmentEvaluators.STEPPED
-          } else if (type == 3) {
+          } else if (type === 3) {
             evaluate = BuiltinAnimationSegmentEvaluators.INVERSE_STEPPED
-          } else if (type != 0) {
+          } else if (type !== 0) {
           }
           points.push(new AnimationPoint(s[t + 1], s[t + 2]))
           segments.push(new AnimationSegment(offset, evaluate))
         }
         var track = new AnimationTrack(c.Id, points, segments)
-        if (c.Target == 'Model') {
+        if (c.Target === 'Model') {
           _this.modelTracks.push(track)
-        } else if (c.Target == 'Parameter') {
+        } else if (c.Target === 'Parameter') {
           _this.parameterTracks.push(track)
-        } else if (c.Target == 'PartOpacity') {
+        } else if (c.Target === 'PartOpacity') {
           _this.partOpacityTracks.push(track)
         } else {
         }
@@ -137,7 +137,7 @@ var LIVE2DCUBISMFRAMEWORK;
         : null
     }
     Animation.prototype.addAnimationCallback = function (callbackFunc) {
-      if (this._callbackFunctions == null) { this._callbackFunctions = new Array() }
+      if (this._callbackFunctions == null) { this._callbackFunctions = [] }
       this._callbackFunctions.push(callbackFunc)
     }
     Animation.prototype.removeAnimationCallback = function (callbackFunc) {
@@ -159,7 +159,7 @@ var LIVE2DCUBISMFRAMEWORK;
       if (this._callbackFunctions.length > 0) { this._callbackFunctions.forEach(function (func) { func(value) }) }
     }
     Animation.prototype.evaluate = function (time, weight, blend, target, stackFlags, groups) {
-      if (groups === void 0) { groups = null }
+      if (groups === undefined) { groups = null }
       if (weight <= 0.01) {
         return
       }
@@ -172,7 +172,7 @@ var LIVE2DCUBISMFRAMEWORK;
         var p = target.parameters.ids.indexOf(t.targetId)
         if (p >= 0) {
           var sample = t.evaluate(time)
-          if (stackFlags[0][p] != true) {
+          if (stackFlags[0][p] !== true) {
             target.parameters.values[p] = target.parameters.defaultValues[p]
             stackFlags[0][p] = true
           }
@@ -183,7 +183,7 @@ var LIVE2DCUBISMFRAMEWORK;
         var p = target.parts.ids.indexOf(t.targetId)
         if (p >= 0) {
           var sample = t.evaluate(time)
-          if (stackFlags[1][p] != true) {
+          if (stackFlags[1][p] !== true) {
             target.parts.opacities[p] = 1
             stackFlags[1][p] = true
           }
@@ -199,7 +199,7 @@ var LIVE2DCUBISMFRAMEWORK;
               var p = target.parameters.ids.indexOf(tid)
               if (p >= 0) {
                 var sample = t.evaluate(time)
-                if (stackFlags[0][p] != true) {
+                if (stackFlags[0][p] !== true) {
                   target.parameters.values[p] = target.parameters.defaultValues[p]
                   stackFlags[0][p] = true
                 }
@@ -221,8 +221,7 @@ var LIVE2DCUBISMFRAMEWORK;
       if (timeForward > timeBack) {
         if (timeEvaluate > timeBack && timeEvaluate < timeForward) { return true }
       } else {
-        if (timeEvaluate > 0 && timeEvaluate < timeForward ||
-          timeEvaluate > timeBack && timeEvaluate < duration) { return true }
+        if ((timeEvaluate > 0 && timeEvaluate < timeForward) || (timeEvaluate > timeBack && timeEvaluate < duration)) { return true }
       }
       return false
     }
@@ -295,7 +294,7 @@ var LIVE2DCUBISMFRAMEWORK;
       configurable: true
     })
     AnimationLayer.prototype.play = function (animation, fadeDuration) {
-      if (fadeDuration === void 0) { fadeDuration = 0 }
+      if (fadeDuration === undefined) { fadeDuration = 0 }
       if (this._animation && fadeDuration > 0) {
         this._goalAnimation = animation
         this._goalTime = 0
@@ -380,8 +379,8 @@ var LIVE2DCUBISMFRAMEWORK;
       configurable: true
     })
     Animator.prototype.addLayer = function (name, blender, weight) {
-      if (blender === void 0) { blender = BuiltinAnimationBlenders.OVERRIDE }
-      if (weight === void 0) { weight = 1 }
+      if (blender === undefined) { blender = BuiltinAnimationBlenders.OVERRIDE }
+      if (weight === undefined) { weight = 1 }
       var layer = new AnimationLayer()
       layer.blend = blender
       layer.weightCrossfade = BuiltinCrossfadeWeighters.LINEAR
@@ -412,9 +411,9 @@ var LIVE2DCUBISMFRAMEWORK;
           l._update(deltaTime)
         })
       }
-      var paramStackFlags = new Array(this._target.parameters.count).fill(false)
-      var partsStackFlags = new Array(this._target.parts.count).fill(false)
-      var stackFlags = new Array(paramStackFlags, partsStackFlags)
+      var paramStackFlags = new Array(this._target.parameters.count).fill(false) // eslint-disable-line no-array-constructor
+      var partsStackFlags = new Array(this._target.parts.count).fill(false) // eslint-disable-line no-array-constructor
+      var stackFlags = new Array(paramStackFlags, partsStackFlags) // eslint-disable-line no-array-constructor
       this._layers.forEach(function (l) {
         l._evaluate(_this._target, stackFlags)
       })
@@ -438,10 +437,10 @@ var LIVE2DCUBISMFRAMEWORK;
   var AnimatorBuilder = (function () {
     function AnimatorBuilder () {
       this._timeScale = 1
-      this._layerNames = new Array()
-      this._layerBlenders = new Array()
-      this._layerCrossfadeWeighters = new Array()
-      this._layerWeights = new Array()
+      this._layerNames = []
+      this._layerBlenders = []
+      this._layerCrossfadeWeighters = []
+      this._layerWeights = []
     }
     AnimatorBuilder.prototype.setTarget = function (value) {
       this._target = value
@@ -452,8 +451,8 @@ var LIVE2DCUBISMFRAMEWORK;
       return this
     }
     AnimatorBuilder.prototype.addLayer = function (name, blender, weight) {
-      if (blender === void 0) { blender = BuiltinAnimationBlenders.OVERRIDE }
-      if (weight === void 0) { weight = 1 }
+      if (blender === undefined) { blender = BuiltinAnimationBlenders.OVERRIDE }
+      if (weight === undefined) { weight = 1 }
       this._layerNames.push(name)
       this._layerBlenders.push(blender)
       this._layerCrossfadeWeighters.push(BuiltinCrossfadeWeighters.LINEAR)
@@ -556,7 +555,7 @@ var LIVE2DCUBISMFRAMEWORK;
     Physics.directionToRadians = function (from, to) {
       var dot = PhysicsVector2.dot(from, to)
       var magnitude = from.length * to.length
-      if (magnitude == 0) {
+      if (magnitude === 0) {
         return 0
       }
       var cosTheta = (dot / magnitude)
@@ -642,12 +641,12 @@ var LIVE2DCUBISMFRAMEWORK;
       switch (Math.sign(value)) {
         case 1:
           {
-            var parameterRange = parameterMaximum - parameterMiddle
-            if (parameterRange == 0) {
+            const parameterRange = parameterMaximum - parameterMiddle
+            if (parameterRange === 0) {
               value = normalization.angle.def
             } else {
-              var normalizationRange = normalization.angle.maximum - normalization.angle.def
-              if (normalizationRange == 0) {
+              const normalizationRange = normalization.angle.maximum - normalization.angle.def
+              if (normalizationRange === 0) {
                 value = normalization.angle.maximum
               } else {
                 value *= Math.abs(normalizationRange / parameterRange)
@@ -658,24 +657,21 @@ var LIVE2DCUBISMFRAMEWORK;
           break
         case -1:
           {
-            var parameterRange = parameterMiddle - parameterMinimum
-            if (parameterRange == 0) {
+            const parameterRange = parameterMiddle - parameterMinimum
+            if (parameterRange === 0) {
               value = normalization.angle.def
             } else {
-              var normalizationRange = normalization.angle.def - normalization.angle.minimum
-              if (normalizationRange == 0) {
+              const normalizationRange = normalization.angle.def - normalization.angle.minimum
+              if (normalizationRange === 0) {
                 value = normalization.angle.minimum
               } else {
                 value *= Math.abs(normalizationRange / parameterRange)
                 value += normalization.angle.def
               }
-            }
-          }
+            } }
           break
         case 0:
-          {
-            value = normalization.angle.def
-          }
+          value = normalization.angle.def
           break
       }
       var weight = (this.weight / Physics.maximumWeight)
@@ -742,7 +738,7 @@ var LIVE2DCUBISMFRAMEWORK;
       var factor = new PhysicsFactorTuple(0, 0, 0)
       this.input.forEach(function (i) {
         var parameterIndex = parameters.ids.indexOf(i.targetId)
-        if (parameterIndex == -1) {
+        if (parameterIndex === -1) {
           return
         }
         factor = factor.add(i.evaluateFactor(parameters.values[parameterIndex], parameters.minimumValues[parameterIndex], parameters.maximumValues[parameterIndex], parameters.defaultValues[parameterIndex], _this.normalization))
@@ -756,7 +752,7 @@ var LIVE2DCUBISMFRAMEWORK;
         .radiansToDirection(factorRadians)
         .normalize()
       this.particles.forEach(function (p, i) {
-        if (i == 0) {
+        if (i === 0) {
           p.position = new PhysicsVector2(factor.x, factor.y)
           return
         }
@@ -785,7 +781,7 @@ var LIVE2DCUBISMFRAMEWORK;
         if (Math.abs(p.position.x) < Physics.movementThreshold) {
           p.position.x = 0
         }
-        if (delay != 0) {
+        if (delay !== 0) {
           p.velocity = p.position
             .substract(p.lastPosition)
             .divideByScalar(delay)
@@ -805,7 +801,7 @@ var LIVE2DCUBISMFRAMEWORK;
           return
         }
         var parameterIndex = parameters.ids.indexOf(o.targetId)
-        if (parameterIndex == -1) {
+        if (parameterIndex === -1) {
           return
         }
         var translation = _this.particles[o.particleIndex - 1].position.substract(_this.particles[o.particleIndex].position)
@@ -826,33 +822,33 @@ var LIVE2DCUBISMFRAMEWORK;
       if (!target) {
         return
       }
-      this._subRigs = new Array()
+      this._subRigs = []
       physics3Json.PhysicsSettings.forEach(function (r) {
-        var input = new Array()
+        var input = []
         r.Input.forEach(function (i) {
           var factor = new PhysicsFactorTuple(1, 0, 0)
-          if (i.Type == 'Y') {
+          if (i.Type === 'Y') {
             factor.x = 0
             factor.y = 1
-          } else if (i.Type == 'Angle') {
+          } else if (i.Type === 'Angle') {
             factor.x = 0
             factor.angle = 1
           }
           input.push(new PhysicsInput(i.Source.Id, i.Weight, factor, i.Reflect))
         })
-        var output = new Array()
+        var output = []
         r.Output.forEach(function (o) {
           var factor = new PhysicsFactorTuple(1, 0, 0)
-          if (o.Type == 'Y') {
+          if (o.Type === 'Y') {
             factor.x = 0
             factor.y = 1
-          } else if (o.Type == 'Angle') {
+          } else if (o.Type === 'Angle') {
             factor.x = 0
             factor.angle = 1
           }
           output.push(new PhysicsOutput(o.Destination.Id, o.VertexIndex, o.Weight, o.Scale, factor, o.Reflect))
         })
-        var particles = new Array()
+        var particles = []
         r.Vertices.forEach(function (p) {
           var initialPosition = new PhysicsVector2(p.Position.X, p.Position.Y)
           particles.push(new PhysicsParticle(initialPosition, p.Mobility, p.Delay, p.Acceleration, p.Radius))
@@ -927,7 +923,7 @@ var LIVE2DCUBISMFRAMEWORK;
       this._userDataCount = userData3Json.Meta.UserDataCount
       this._totalUserDataSize = userData3Json.Meta.TotalUserDataSize
       if (userData3Json.UserData != null) {
-        this._userDataBodys = new Array()
+        this._userDataBodys = []
         userData3Json.UserData.forEach(function (u) {
           _this._userDataBodys.push(new UserDataBody(u.Target, u.Id, u.Value))
         })
@@ -1014,7 +1010,8 @@ var LIVE2DCUBISMFRAMEWORK;
       return this
     }
     UserDataBuilder.prototype.setUserData3Json = function (value) {
-      return this._userData3Json = value
+      this._userData3Json = value
+      return value
     }
     UserDataBuilder.prototype.build = function () {
       return UserData._fromUserData3Json(this._target, this._userData3Json)
@@ -1040,7 +1037,7 @@ var LIVE2DCUBISMFRAMEWORK;
     function Groups (model3Json) {
       var _this = this
       if (typeof (model3Json.Groups) !== 'undefined') {
-        this._groupBodys = new Array()
+        this._groupBodys = []
         model3Json.Groups.forEach(function (u) {
           _this._groupBodys.push(new GroupBody(u.Target, u.Name, u.Ids))
         })
@@ -1085,8 +1082,8 @@ var LIVE2DCUBISMFRAMEWORK;
 var __extends = (this && this.__extends) || (function () {
   var extendStatics = function (d, b) {
     extendStatics = Object.setPrototypeOf ||
-      ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b }) ||
-      function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p] }
+      ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b }) || // eslint-disable-line no-proto
+      function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p] } // eslint-disable-line no-prototype-builtins
     return extendStatics(d, b)
   }
   return function (d, b) {
@@ -1246,7 +1243,7 @@ var LIVE2DCUBISMPIXI;
       this._coreModel.drawables.resetDynamicFlags()
     }
     Model.prototype.destroy = function (options) {
-      if (this._coreModel != null) {
+      if (this._coreModel !== null) {
         this._coreModel.release()
       }
       _super.prototype.destroy.call(this, options)
@@ -1254,7 +1251,7 @@ var LIVE2DCUBISMPIXI;
       this._meshes.forEach(function (m) {
         m.destroy()
       })
-      if (options == true || options.texture) {
+      if (options === true || options.texture) {
         this._textures.forEach(function (t) {
           t.destroy()
         })
@@ -1270,15 +1267,15 @@ var LIVE2DCUBISMPIXI;
     }
     Model.prototype.addParameterValueById = function (id, value) {
       var p = this._coreModel.parameters.ids.indexOf(id)
-      if (p == -1) {
+      if (p === -1) {
         return
       }
       this._coreModel.parameters.values[p] = this._coreModel.parameters.values[p] + value
     }
     Model._create = function (coreModel, textures, animator, physicsRig, userData, groups) {
-      if (physicsRig === void 0) { physicsRig = null }
-      if (userData === void 0) { userData = null }
-      if (groups === void 0) { groups = null }
+      if (physicsRig === undefined) { physicsRig = null }
+      if (userData === undefined) { userData = null }
+      if (groups === undefined) { groups = null }
       var model = new Model(coreModel, textures, animator, physicsRig, userData, groups)
       if (!model.isValid) {
         model.destroy()
@@ -1300,14 +1297,14 @@ var LIVE2DCUBISMPIXI;
     __extends(MaskSpriteContainer, _super)
     function MaskSpriteContainer (coreModel, pixiModel) {
       var _this = _super.call(this) || this
-      _this._maskShaderVertSrc = new String('\n            attribute vec2 aVertexPosition;\n            attribute vec2 aTextureCoord;\n            uniform mat3 projectionMatrix;\n            varying vec2 vTextureCoord;\n            void main(void){\n                gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n                vTextureCoord = aTextureCoord;\n            }\n            ')
-      _this._maskShaderFragSrc = new String('\n            varying vec2 vTextureCoord;\n            uniform sampler2D uSampler;\n            void main(void){\n                vec4 c = texture2D(uSampler, vTextureCoord);\n                c.r = c.a;\n                c.g = 0.0;\n                c.b = 0.0;\n                gl_FragColor = c;\n            }\n            ')
+      _this._maskShaderVertSrc = '\n            attribute vec2 aVertexPosition;\n            attribute vec2 aTextureCoord;\n            uniform mat3 projectionMatrix;\n            varying vec2 vTextureCoord;\n            void main(void){\n                gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n                vTextureCoord = aTextureCoord;\n            }\n            '
+      _this._maskShaderFragSrc = '\n            varying vec2 vTextureCoord;\n            uniform sampler2D uSampler;\n            void main(void){\n                vec4 c = texture2D(uSampler, vTextureCoord);\n                c.r = c.a;\n                c.g = 0.0;\n                c.b = 0.0;\n                gl_FragColor = c;\n            }\n            '
       _this._maskShader = new PIXI.Filter(_this._maskShaderVertSrc.toString(), _this._maskShaderFragSrc.toString())
       var _maskCounts = coreModel.drawables.maskCounts
       var _maskRelationList = coreModel.drawables.masks
-      _this._maskMeshContainers = new Array()
-      _this._maskTextures = new Array()
-      _this._maskSprites = new Array()
+      _this._maskMeshContainers = []
+      _this._maskTextures = []
+      _this._maskSprites = []
       for (var m = 0; m < pixiModel.meshes.length; ++m) {
         if (_maskCounts[m] > 0) {
           var newContainer = new PIXI.Container()
@@ -1378,7 +1375,7 @@ var LIVE2DCUBISMPIXI;
   LIVE2DCUBISMPIXI.MaskSpriteContainer = MaskSpriteContainer
   var ModelBuilder = (function () {
     function ModelBuilder () {
-      this._textures = new Array()
+      this._textures = []
       this._timeScale = 1
       this._animatorBuilder = new LIVE2DCUBISMFRAMEWORK.AnimatorBuilder()
     }
@@ -1409,8 +1406,8 @@ var LIVE2DCUBISMPIXI;
       return this
     }
     ModelBuilder.prototype.addAnimatorLayer = function (name, blender, weight) {
-      if (blender === void 0) { blender = LIVE2DCUBISMFRAMEWORK.BuiltinAnimationBlenders.OVERRIDE }
-      if (weight === void 0) { weight = 1 }
+      if (blender === undefined) { blender = LIVE2DCUBISMFRAMEWORK.BuiltinAnimationBlenders.OVERRIDE }
+      if (weight === undefined) { weight = 1 }
       this._animatorBuilder.addLayer(name, blender, weight)
       return this
     }
@@ -1432,7 +1429,7 @@ var LIVE2DCUBISMPIXI;
       }
       if (typeof (model3Obj.data.FileReferences.Physics) !== 'undefined') { loader.add('physics', modelDir + model3Obj.data.FileReferences.Physics, { xhrType: PIXI.loaders.Resource.XHR_RESPONSE_TYPE.JSON }) }
       if (typeof (model3Obj.data.FileReferences.UserData) !== 'undefined') { loader.add('userdata', modelDir + model3Obj.data.FileReferences.UserData, { xhrType: PIXI.loaders.Resource.XHR_RESPONSE_TYPE.JSON }) }
-      if (typeof (model3Obj.data.Groups !== 'undefined')) { this._groups = LIVE2DCUBISMFRAMEWORK.Groups.fromModel3Json(model3Obj.data) }
+      if (typeof (model3Obj.data.Groups) !== 'undefined') { this._groups = LIVE2DCUBISMFRAMEWORK.Groups.fromModel3Json(model3Obj.data) }
       loader.load(function (loader, resources) {
         if (typeof (resources.moc) !== 'undefined') { _this.setMoc(Live2DCubismCore.Moc.fromArrayBuffer(resources.moc.data)) }
         if (typeof (resources['texture' + 0]) !== 'undefined') {
@@ -1474,7 +1471,7 @@ var LIVE2DCUBISMPIXI;
   var CubismMesh = (function (_super) {
     __extends(CubismMesh, _super)
     function CubismMesh () {
-      var _this = _super !== null && _super.apply(this, arguments) || this
+      var _this = (_super !== null && _super.apply(this, arguments)) || this
       _this.isCulling = false
       _this.isMaskMesh = false
       return _this
@@ -1512,10 +1509,10 @@ class L2D {
     if (!this.models[name]) {
       const modelDir = name + '/'
       const modelPath = name + '.model3.json'
-      const textures = new Array()
+      const textures = []
       let textureCount = 0
-      const motionNames = new Array()
-      const modelNames = new Array()
+      const motionNames = []
+      const modelNames = []
 
       // if (!modelNames.includes(name+'_model')){
       this.loader.add(name + '_model', modelDir + modelPath, { xhrType: PIXI.loaders.Resource.XHR_RESPONSE_TYPE.JSON })
@@ -1557,7 +1554,7 @@ class L2D {
         }
 
         let groups = null
-        if (typeof (model3Obj.Groups !== 'undefined')) {
+        if (typeof (model3Obj.Groups) !== 'undefined') {
           groups = LIVE2DCUBISMFRAMEWORK.Groups.fromModel3Json(model3Obj)
         }
 
@@ -1613,10 +1610,30 @@ class L2D {
     }
   }
 }
-class l2dViewer {
-  constructor({ basePath, modelName, width, height, el, sizeLimit, mobileLimit }) {
-    if (typeof Live2DCubismCore !== 'object') console.error('live2dv3 failed to load:\nMissing live2dcubismcore.js\nPlease add "https://cdn.jsdelivr.net/gh/HCLonely/Live2dV3/js/live2dcubismcore.min.js" to the "<script>" tag.\nLook at https://github.com/HCLonely/Live2dV3')
-    if (typeof PIXI !== 'object') console.error('live2dv3 failed to load:\nMissing pixi.js\nPlease add "https://cdn.jsdelivr.net/npm/pixi.js@4.6.1/dist/pixi.min.js" to the "<script>" tag.\nLook at https://github.com/HCLonely/Live2dV3')
+class l2dViewer { // eslint-disable-line no-unused-vars
+  constructor ({ basePath, modelName, width, height, el, sizeLimit, mobileLimit }) {
+    if (typeof Live2DCubismCore === 'undefined') {
+      console.error('live2dv3 failed to load:\nMissing live2dcubismcore.js\nPlease add "https://cdn.jsdelivr.net/gh/HCLonely/Live2dV3/js/live2dcubismcore.min.js" to the "<script>" tag.\nLook at https://github.com/HCLonely/Live2dV3')
+      return
+    }
+    if (typeof PIXI === 'undefined') {
+      console.error('live2dv3 failed to load:\nMissing pixi.js\nPlease add "https://cdn.jsdelivr.net/npm/pixi.js@4.6.1/dist/pixi.min.js" to the "<script>" tag.\nLook at https://github.com/HCLonely/Live2dV3')
+      return
+    }
+
+    if (!this.isDom(el)) {
+      if (el.length > 0) {
+        if (this.isDom(el[0])) {
+          el = el[0]
+        } else {
+          console.error('live2dv3 failed to load:\n', el[0], 'is not a HTMLElement object')
+          return
+        }
+      } else {
+        console.error('live2dv3 failed to load:\n', el, 'is not a HTMLElement object')
+        return
+      }
+    }
 
     if (sizeLimit && (document.documentElement.clientWidth < width || document.documentElement.clientHeight < height)) return
     if (mobileLimit && /Mobile|Mac OS|Android|iPhone|iPad/i.test(navigator.userAgent)) return
@@ -1639,7 +1656,7 @@ class l2dViewer {
       this.model.masks.update(this.app.renderer)
     })
     window.onresize = (event) => {
-      if (event === void 0) { event = null }
+      if (event === undefined) { event = null }
       this.app.view.style.width = width + 'px'
       this.app.view.style.height = height + 'px'
       this.app.renderer.resize(width, height)
@@ -1663,10 +1680,10 @@ class l2dViewer {
       }
 
       if (this.model) {
-        const mouse_x = this.model.position.x - event.offsetX
-        const mouse_y = this.model.position.y - event.offsetY
-        this.model.pointerX = -mouse_x / this.app.view.height
-        this.model.pointerY = -mouse_y / this.app.view.width
+        const mouseX = this.model.position.x - event.offsetX
+        const mouseY = this.model.position.y - event.offsetY
+        this.model.pointerX = -mouseX / this.app.view.height
+        this.model.pointerY = -mouseY / this.app.view.width
       }
     })
     this.app.view.addEventListener('mouseup', (event) => {
@@ -1810,11 +1827,19 @@ class l2dViewer {
       }
     }
 
-    const mouse_x = m.worldTransform.tx - posX
-    const mouse_y = m.worldTransform.ty - posY
-    const tx = -mouse_x / m.worldTransform.a
-    const ty = -mouse_y / m.worldTransform.d
+    const mouseX = m.worldTransform.tx - posX
+    const mouseY = m.worldTransform.ty - posY
+    const tx = -mouseX / m.worldTransform.a
+    const ty = -mouseY / m.worldTransform.d
 
     return ((left <= tx) && (tx <= right) && (top <= ty) && (ty <= bottom))
+  }
+
+  isDom (e) {
+    if (typeof HTMLElement === 'object') {
+      return e instanceof HTMLElement
+    } else {
+      return e && typeof e === 'object' && e.nodeType === 1 && typeof e.nodeName === 'string'
+    }
   }
 }
