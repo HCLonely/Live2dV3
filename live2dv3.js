@@ -1706,7 +1706,7 @@ class l2dViewer { // eslint-disable-line no-unused-vars
         }
         if (sounds && sounds.length > 0) {
           const soundFile = sounds[Math.floor((Math.random() * sounds.length))]
-          const filePath = /^https?:\/\//.test(soundFile) ? soundFile : [basePath, modelName, soundFile].join('/').replace(/\/\//g, '/')
+          const filePath = /^https?:\/\//.test(soundFile) ? soundFile : [basePath, modelName, soundFile].join('/').replace(/(?<!:)\/\//g, '/')
           try {
             new Audio(filePath).play()
           } catch (e) {
@@ -1855,7 +1855,7 @@ class l2dViewer { // eslint-disable-line no-unused-vars
     }
   }
 }
-const VERSION = '1.1.7'
+const VERSION = '1.2.0'
 function sayHello () {
   var _a
   if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
