@@ -1856,7 +1856,7 @@ class l2dViewer { // eslint-disable-line no-unused-vars
     }
   }
 }
-const VERSION = '1.1.4'
+const VERSION = '1.1.5'
 function sayHello () {
   var _a
   if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
