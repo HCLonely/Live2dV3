@@ -668,7 +668,8 @@ var LIVE2DCUBISMFRAMEWORK;
                 value *= Math.abs(normalizationRange / parameterRange)
                 value += normalization.angle.def
               }
-            } }
+            }
+          }
           break
         case 0:
           value = normalization.angle.def
@@ -1611,7 +1612,7 @@ class L2D {
   }
 }
 class l2dViewer { // eslint-disable-line no-unused-vars
-  constructor ({ basePath, modelName, width, height, el, sizeLimit, mobileLimit }) {
+  constructor ({ basePath, modelName, width, height, el, sizeLimit, mobileLimit, sounds }) {
     if (typeof Live2DCubismCore === 'undefined') {
       console.error('live2dv3 failed to load:\nMissing live2dcubismcore.js\nPlease add "https://cdn.jsdelivr.net/gh/HCLonely/Live2dV3/js/live2dcubismcore.min.js" to the "<script>" tag.\nLook at https://github.com/HCLonely/Live2dV3')
       return
@@ -1637,6 +1638,8 @@ class l2dViewer { // eslint-disable-line no-unused-vars
 
     if (sizeLimit && (document.documentElement.clientWidth < width || document.documentElement.clientHeight < height)) return
     if (mobileLimit && /Mobile|Mac OS|Android|iPhone|iPad/i.test(navigator.userAgent)) return
+
+    window.console.log('Live2dV3: loading model "' + modelName + '"')
 
     this.l2d = new L2D(basePath)
 
@@ -1701,6 +1704,7 @@ class l2dViewer { // eslint-disable-line no-unused-vars
           const currentMotion = bodyMotions[Math.floor(Math.random() * bodyMotions.length)]
           this.startAnimation(currentMotion, 'base')
         }
+        if (sounds && sounds.length > 0) this.playAudio(sounds[Math.floor((Math.random() * sounds.length))])
       }
 
       this.isClick = false
@@ -1835,6 +1839,15 @@ class l2dViewer { // eslint-disable-line no-unused-vars
     return ((left <= tx) && (tx <= right) && (top <= ty) && (ty <= bottom))
   }
 
+  playAudio (file) {
+    const filePath = /^https?:\/\//.test(file) ? file : (this.l2d.loader.baseUrl + '/' + file)
+    try {
+      new Audio(filePath).play()
+    } catch (e) {
+      console.error('Sound playback failed:', e)
+    }
+  }
+
   isDom (e) {
     if (typeof HTMLElement === 'object') {
       return e instanceof HTMLElement
@@ -1843,3 +1856,21 @@ class l2dViewer { // eslint-disable-line no-unused-vars
     }
   }
 }
+const VERSION = '1.1.4'
+function sayHello () {
+  var _a
+  if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
+    var args = [
+      '\n\n       %c %c %c \u2730 Live2dV3 ' + VERSION + ' \u2730  %c  \n%c  https://github.com/HCLonely/Live2dV3  %c\n\n',
+      'background: #ff66a5; padding:5px 0;',
+      'background: #ff66a5; padding:5px 0;',
+      'color: #ff66a5; background: #030307; padding:5px 0;',
+      'background: #ff66a5; padding:5px 0;',
+      'background: #ffc3dc; padding:5px 0;',
+      'background: #ff66a5; padding:5px 0;'];
+    (_a = window.console).log.apply(_a, args)
+  } else if (window.console) {
+    window.console.log('Live2dV3 ' + VERSION + ' - https://github.com/HCLonely/Live2dV3')
+  }
+}
+sayHello()

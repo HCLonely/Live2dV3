@@ -17,7 +17,7 @@
 <script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/pixi.js@4.6.1/dist/pixi.min.js"></script>
 <!-- live2dv3.js -->
-<script src="https://cdn.jsdelivr.net/npm/live2dv3@1.1.3/live2dv3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/live2dv3@1.1.4/live2dv3.min.js"></script>
 
 <!-- 加载Live2d模型 -->
 <script>
@@ -29,7 +29,11 @@
             width: 500,
             height: 300,
             sizeLimit: true, // 当窗口大小小于上面的宽或高时不加载模型
-            mobileLimit: true // 移动端不加载模型
+            mobileLimit: true, // 移动端不加载模型
+            sounds: [ // 触摸播放声音
+                'sounds/demo.mp3', // 相对路径是相对于模型文件夹
+                'https://cdn.jsdelivr.net/gh/HCLonely/Live2dV3@latest/asset/biaoqiang_3/sounds/demo.mp3' // 也可以是网址
+            ]
         })
     }
 </script>
