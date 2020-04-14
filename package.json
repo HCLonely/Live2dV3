@@ -1,6 +1,6 @@
 {
   "name": "live2dv3",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "在网页上添加 moc3 格式的Live2d模型 https://live2dv3demo.hclonely.com/",
   "main": "live2dv3.js",
   "scripts": {

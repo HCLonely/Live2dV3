@@ -1704,7 +1704,16 @@ class l2dViewer { // eslint-disable-line no-unused-vars
           const currentMotion = bodyMotions[Math.floor(Math.random() * bodyMotions.length)]
           this.startAnimation(currentMotion, 'base')
         }
-        if (sounds && sounds.length > 0) this.playAudio(sounds[Math.floor((Math.random() * sounds.length))])
+        if (sounds && sounds.length > 0) {
+          const soundFile = sounds[Math.floor((Math.random() * sounds.length))]
+          const filePath = /^https?:\/\//.test(soundFile) ? soundFile : [basePath, modelName, soundFile].join('/').replace(/\/\//g, '/')
+          try {
+            new Audio(filePath).play()
+          } catch (e) {
+            console.error('Sound playback failed:', e)
+          }
+          this.playAudio()
+        }
       }
 
       this.isClick = false
@@ -1839,15 +1848,6 @@ class l2dViewer { // eslint-disable-line no-unused-vars
     return ((left <= tx) && (tx <= right) && (top <= ty) && (ty <= bottom))
   }
 
-  playAudio (file) {
-    const filePath = /^https?:\/\//.test(file) ? file : (this.l2d.loader.baseUrl + '/' + file)
-    try {
-      new Audio(filePath).play()
-    } catch (e) {
-      console.error('Sound playback failed:', e)
-    }
-  }
-
   isDom (e) {
     if (typeof HTMLElement === 'object') {
       return e instanceof HTMLElement
@@ -1856,7 +1856,7 @@ class l2dViewer { // eslint-disable-line no-unused-vars
     }
   }
 }
-const VERSION = '1.1.5'
+const VERSION = '1.1.6'
 function sayHello () {
   var _a
   if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {

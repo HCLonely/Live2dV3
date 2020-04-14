@@ -17,7 +17,7 @@
 <script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/pixi.js@4.6.1/dist/pixi.min.js"></script>
 <!-- live2dv3.js -->
-<script src="https://cdn.jsdelivr.net/npm/live2dv3@1.1.5/live2dv3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/live2dv3@1.1.6/live2dv3.min.js"></script>
 
 <!-- 加载Live2d模型 -->
 <script>
