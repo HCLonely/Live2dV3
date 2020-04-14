@@ -1712,7 +1712,6 @@ class l2dViewer { // eslint-disable-line no-unused-vars
           } catch (e) {
             console.error('Sound playback failed:', e)
           }
-          this.playAudio()
         }
       }
 
@@ -1856,7 +1855,7 @@ class l2dViewer { // eslint-disable-line no-unused-vars
     }
   }
 }
-const VERSION = '1.1.6'
+const VERSION = '1.1.7'
 function sayHello () {
   var _a
   if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
