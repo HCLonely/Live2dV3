@@ -1707,10 +1707,12 @@ class l2dViewer { // eslint-disable-line no-unused-vars
         if (sounds && sounds.length > 0) {
           const soundFile = sounds[Math.floor((Math.random() * sounds.length))]
           const filePath = /^https?:\/\//.test(soundFile) ? soundFile : [basePath, modelName, soundFile].join('/').replace(/(?<!:)\/\//g, '/')
-          try {
+          if (typeof Howl !== 'undefined') {
+            new Howl({ src: [filePath] }).play()
+          } else if (typeof Audio !== 'undefined') {
             new Audio(filePath).play()
-          } catch (e) {
-            console.error('Sound playback failed:', e)
+          } else {
+            console.error('Current browser does not support playing sound.')
           }
         }
       }
@@ -1855,7 +1857,7 @@ class l2dViewer { // eslint-disable-line no-unused-vars
     }
   }
 }
-const VERSION = '1.2.0'
+const VERSION = '1.2.1'
 function sayHello () {
   var _a
   if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {

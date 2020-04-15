@@ -1,10 +1,10 @@
 {
   "name": "live2dv3",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "在网页上添加 moc3 格式的Live2d模型 https://live2dv3demo.hclonely.com/",
   "main": "live2dv3.js",
   "scripts": {
-    "test": "standard live2dv3.js --verbose | snazzy",
+    "test": "standard live2dv3.js --fix --verbose | snazzy",
     "build": "standard live2dv3.js --fix"
   },
   "repository": {
@@ -30,7 +30,8 @@
       "PIXI",
       "Live2DCubismCore",
       "HTMLElement",
-      "Audio"
+      "Audio",
+      "Howl"
     ]
   }
 }
