@@ -44,14 +44,14 @@
 
 | 参数 | 类型 | 描述 | 默认 |
 | :-----: | :-----: | :-----: | :-----: |
-| `el` | [必需]DOM 对象或 jQuery 对象 | 要挂载Live2d模型的元素, 支持DOM选择器和jQuery选择器，例：`document.getElementById('L2dCanvas')`或`document.querySelector('#L2dCanvas')`或`$('#L2dCanvas')` | `null` |
-| `basePath` | [必需]String | 模型根目录 | `null` |
-| `modelName` | [必需]String | 模型目录 | `null` |
-| `width` | [可选]Number | Canvas宽度，单位: `px` | `500` |
-| `height` | [可选]Number | Canvas高度，单位: `px` | `300` |
-| `sizeLimit` | [可选]Boolean | 当窗口大小小于设置的宽或高时不加载模型 | `false` |
-| `mobileLimit` | [可选]Boolean | 移动端不加载模型 | `false` |
-| `sounds` | [可选]Array | 触摸播放声音， 留空则不播放 | `null` |
+| `el` | [必需] DOM 对象或 jQuery 对象 | 要挂载Live2d模型的元素, 支持DOM选择器和jQuery选择器，例：`document.getElementById('L2dCanvas')`或`document.querySelector('#L2dCanvas')`或`$('#L2dCanvas')` | `null` |
+| `basePath` | [必需] String | 模型根目录 | `null` |
+| `modelName` | [必需] String | 模型目录 | `null` |
+| `width` | [可选] Number | Canvas宽度，单位: `px` | `500` |
+| `height` | [可选] Number | Canvas高度，单位: `px` | `300` |
+| `sizeLimit` | [可选] Boolean | 当窗口大小小于设置的宽或高时不加载模型 | `false` |
+| `mobileLimit` | [可选] Boolean | 移动端不加载模型 | `false` |
+| `sounds` | [可选] Array | 触摸播放声音， 留空则不播放 | `null` |
 
 # 方法
 
